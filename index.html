@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11111d">
+  <meta name="description" content="Хелоуїнська пригода Славіка, Даші й Каті. Обирай героя клавішами 1, 2, 3 і керуй стрілками або A/D.">
+  <title>Славік і друзі · Таємниці Полтави</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23191827'/%3E%3Cellipse cx='32' cy='36' rx='23' ry='20' fill='%23eea05a'/%3E%3Cpath d='M31 18q-2-10 8-12' fill='none' stroke='%238bba86' stroke-width='5'/%3E%3Cpath d='m19 30 8 6-10 1m28-7-8 6 10 1M22 43q10 9 20 0' fill='%23262332'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Славік і друзі, головна">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 13c-4-7 1-10 6-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 14C8 7 1 25 10 37c4 6 10 6 14 4 4 2 10 2 14-4C47 25 40 7 24 14Z" stroke="currentColor" stroke-width="2"/><path d="m14 24 6 4h-7m21-4-6 4h7m-17 6 6 3 6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Славік і друзі<span class="brand-sub">МАЛЕНЬКА ПРИГОДА</span></span>
+      </a>
+      <div class="header-right"><span class="demo-tag"><span></span>Тестова гра</span><button class="icon-button" id="fullscreen" type="button" aria-label="Повний екран" title="Повний екран"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
+    </header>
+
+    <main>
+      <section class="game-card" id="game-card" aria-label="Славік, Даша і Катя — тестова гра">
+        <div class="stage" id="stage">
+          <canvas id="game" tabindex="0" aria-label="Славік у хелоуїнському містечку. Рух: стрілки або A та D. Стрибок: пробіл. Присісти: стрілка вниз або S."></canvas>
+          <div class="speech-layer"><div class="speech-bubble" id="speech-bubble" role="status" aria-live="polite" aria-atomic="true" hidden><span class="speech-text" id="speech-text"></span></div></div>
+          <div class="scene-title" aria-hidden="true"><div class="eyebrow"><span class="line"></span>ПОЛТАВА · ХЕЛОУЇН</div><h1>Хелоуїнська<br><em>прогулянка</em></h1><p>Знайоме місто. Незрозумілі події.<br>Розгадка пригоди — попереду.</p></div>
+          <div class="scene-note" aria-hidden="true"><span class="glow-dot"></span>Досліджуй у своєму темпі</div>
+          <div class="character-picker" role="group" aria-label="Обрати персонажа">
+            <button type="button" class="character-button" data-character="slavik" aria-pressed="true"><kbd>1</kbd><span>Славік</span></button>
+            <button type="button" class="character-button" data-character="dasha" aria-pressed="false"><kbd>2</kbd><span>Даша</span></button>
+            <button type="button" class="character-button" data-character="katya" aria-pressed="false"><kbd>3</kbd><span>Катя</span></button>
+          </div>
+          <button class="exit-fullscreen" id="exit-fullscreen" type="button" aria-label="Вийти з повного екрана">Згорнути ↙</button>
+          <div class="loading" id="loading"><span class="loader"></span><p>Запалюємо ліхтарі…</p></div>
+          <div class="error-state" id="error-state" hidden><h2>Пригода зачекалася</h2><p>Не вдалося завантажити сцену.</p><button class="text-button" id="retry" type="button">Спробувати ще раз</button></div>
+        </div>
+        <div class="control-bar" id="touch-controls">
+          <div class="control-layout">
+          <div class="left-control-zone" role="group" aria-label="Ліва рука: рух, присідання, стрибок на місці">
+            <span class="zone-label">РУХ</span>
+            <div class="movement-controls" aria-label="Кнопки руху">
+            <button class="direction-button" id="move-left" type="button" aria-label="Іти ліворуч, утримуйте кнопку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+            <button class="direction-button" id="move-right" type="button" aria-label="Іти праворуч, утримуйте кнопку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <button class="direction-button jump-button" id="jump" type="button" aria-label="Стрибок на місці" title="Вертикальний стрибок на місці"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 18V4m-6 6 6-6 6 6M5 21h14"/></svg><span class="button-caption">На місці</span></button>
+            <button class="direction-button crouch-button" id="crouch" type="button" aria-label="Присісти — утримуйте кнопку" title="Присісти: утримуйте ↓ або S"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 4v13m-6-6 6 6 6-6M5 21h14"/></svg><span class="button-caption">Присісти</span></button>
+            </div>
+          </div>
+          <div class="control-hint"><strong>Клавіатура</strong><span><kbd>←</kbd> <kbd>→</kbd> / <kbd>A</kbd> <kbd>D</kbd> — рух<br><kbd>Пробіл</kbd> — стрибок · <kbd>↓ / S</kbd> — присісти<br><kbd>Enter</kbd> — падіння · <kbd>T</kbd> — розмова</span></div>
+          <div class="right-control-zone" role="group" aria-label="Права рука: стрибок уперед і здібність">
+            <span class="zone-label">ДІЇ</span>
+            <div class="action-controls">
+              <button class="direction-button action-button forward-jump-button" id="jump-forward" type="button" aria-label="Стрибок уперед" title="Один дотик — стрибок у бік погляду героя"><svg class="forward-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18c1-7 5-11 14-11m-5-4 5 4-5 5M3 21h7"/></svg><span class="button-caption">Уперед</span></button>
+              <button class="direction-button action-button ability-button" id="ability" type="button" disabled aria-label="Здібність — буде згодом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1 6.1-5.3-2.9-5.3 2.9 1-6.1-4.4-4.3 6.1-.8Z"/></svg><span class="button-caption">Здібність</span><small>Згодом</small></button>
+            </div>
+          </div>
+          </div>
+          <div class="control-meta"><div class="player-status" id="player-status" role="status" aria-live="polite"><span></span><span id="status-text">Славік відпочиває</span></div><div class="meta-actions"><button class="reset-button talk-button" id="talk" type="button" aria-label="Почати розмову" title="Розмова: T"><span>Розмова</span></button><button class="reset-button" id="reset" type="button" aria-label="Повернути всіх на початок" title="Почати спочатку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10a9 9 0 1 1 1.8 8M3 4v6h6"/></svg><span>Спочатку</span></button></div></div>
+        </div>
+      </section>
+      <footer class="footer"><span>Створено з наших героїв<span class="footer-dot">·</span>Славік, Даша і Катя</span><span class="footer-caption">Таємниці Полтави чекають ✦</span></footer>
+    </main>
+  </div>
+  <script type="module" src="game.mjs"></script>
+</body>
+</html>

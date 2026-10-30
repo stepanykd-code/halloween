@@ -1,0 +1,543 @@
+{
+  "slavik": {
+    "image": "slavik-phone-right.png",
+    "frameSize": [
+      384,
+      512
+    ],
+    "columns": 4,
+    "rows": 2,
+    "frameCount": 8,
+    "groundAnchor": [
+      192,
+      480
+    ],
+    "durationsMs": [
+      200,
+      280,
+      320,
+      450,
+      260,
+      260,
+      220,
+      700
+    ],
+    "loopStart": 4,
+    "idleDelayRangeMs": [
+      8000,
+      15000
+    ],
+    "phoneDurationRangeMs": [
+      3000,
+      5000
+    ],
+    "putAwayMs": 640,
+    "randomInitialIdlePhase": true,
+    "fixedHeadOutsideEyes": true,
+    "fixedLegsAndShoes": true,
+    "eyeRect": [
+      192,
+      81,
+      242,
+      111
+    ],
+    "gazeRegistration": [
+      0,
+      0
+    ],
+    "fixedGlasses": true,
+    "heldPhone": {
+      "referenceFrame": 4,
+      "target": {
+        "center": [
+          272.7805921636126,
+          196.3988516019906
+        ],
+        "size": [
+          13.486782664839666,
+          44.34480321000068
+        ],
+        "angle": 24.75
+      },
+      "measurements": [
+        {
+          "frame": 3,
+          "after": {
+            "center": [
+              272.7805921636126,
+              196.3988516019906
+            ],
+            "size": [
+              13.486782664839666,
+              44.34480321000068
+            ],
+            "angle": 24.75
+          }
+        },
+        {
+          "frame": 4,
+          "after": {
+            "center": [
+              272.7805921636126,
+              196.3988516019906
+            ],
+            "size": [
+              13.486782664839666,
+              44.34480321000068
+            ],
+            "angle": 24.75
+          }
+        },
+        {
+          "frame": 5,
+          "after": {
+            "center": [
+              272.7805921636126,
+              196.3988516019906
+            ],
+            "size": [
+              13.486782664839666,
+              44.34480321000068
+            ],
+            "angle": 24.75
+          }
+        },
+        {
+          "frame": 6,
+          "after": {
+            "center": [
+              272.72767650188905,
+              196.3730134673353
+            ],
+            "size": [
+              13.477354861585297,
+              44.39932039850372
+            ],
+            "angle": 25.0
+          }
+        },
+        {
+          "frame": 7,
+          "after": {
+            "center": [
+              272.7805921636126,
+              196.3988516019906
+            ],
+            "size": [
+              13.486782664839666,
+              44.34480321000068
+            ],
+            "angle": 24.75
+          }
+        }
+      ]
+    },
+    "armAssembly": {
+      "method": "stationary body and supporting hand; one intact forearm rotating at an opaque elbow joint",
+      "runtimeModule": "phone-rig.mjs",
+      "layerImage": "slavik-phone-rig.png",
+      "config": {
+        "panelWidth": 768,
+        "panelHeight": 1024,
+        "scale": 0.46382978723404256,
+        "x": -8.57021276595745,
+        "y": 35.54893617021277,
+        "lowerStart": 289,
+        "bodyCrop": [
+          284,
+          26,
+          376,
+          946
+        ],
+        "headWidth": 245,
+        "bodyPivot": [
+          383,
+          427
+        ],
+        "armPivot": [
+          265,
+          530
+        ],
+        "armCrop": [
+          192,
+          411,
+          357,
+          202
+        ],
+        "armScale": 0.74,
+        "baseAngle": 0,
+        "maxAngle": 0.065,
+        "strokeMs": 950
+      },
+      "atlasSampleAnglesRadians": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.025,
+        0.065,
+        0.015
+      ]
+    }
+  },
+  "dasha": {
+    "image": "dasha-phone-right.png",
+    "frameSize": [
+      384,
+      512
+    ],
+    "columns": 4,
+    "rows": 2,
+    "frameCount": 8,
+    "groundAnchor": [
+      192,
+      480
+    ],
+    "durationsMs": [
+      200,
+      280,
+      320,
+      450,
+      260,
+      260,
+      220,
+      700
+    ],
+    "loopStart": 4,
+    "idleDelayRangeMs": [
+      8000,
+      15000
+    ],
+    "phoneDurationRangeMs": [
+      3000,
+      5000
+    ],
+    "putAwayMs": 640,
+    "randomInitialIdlePhase": true,
+    "fixedHeadOutsideEyes": true,
+    "fixedLegsAndShoes": true,
+    "eyeRect": [
+      192,
+      86,
+      231,
+      109
+    ],
+    "gazeRegistration": [
+      0,
+      0
+    ],
+    "fixedGlasses": false,
+    "heldPhone": {
+      "referenceFrame": 4,
+      "target": {
+        "center": [
+          273.3498927618115,
+          172.20372906264572
+        ],
+        "size": [
+          9.767849622949825,
+          48.09043641500048
+        ],
+        "angle": 24.5
+      },
+      "measurements": [
+        {
+          "frame": 3,
+          "after": {
+            "center": [
+              273.3498927618115,
+              172.20372906264572
+            ],
+            "size": [
+              9.767849622949825,
+              48.09043641500048
+            ],
+            "angle": 24.5
+          }
+        },
+        {
+          "frame": 4,
+          "after": {
+            "center": [
+              273.3498927618115,
+              172.20372906264572
+            ],
+            "size": [
+              9.767849622949825,
+              48.09043641500048
+            ],
+            "angle": 24.5
+          }
+        },
+        {
+          "frame": 5,
+          "after": {
+            "center": [
+              273.3498927618115,
+              172.20372906264572
+            ],
+            "size": [
+              9.767849622949825,
+              48.09043641500048
+            ],
+            "angle": 24.5
+          }
+        },
+        {
+          "frame": 6,
+          "after": {
+            "center": [
+              273.43587800456385,
+              172.01505166759003
+            ],
+            "size": [
+              9.767849622949825,
+              47.67574317234424
+            ],
+            "angle": 24.5
+          }
+        },
+        {
+          "frame": 7,
+          "after": {
+            "center": [
+              273.3498927618115,
+              172.20372906264572
+            ],
+            "size": [
+              9.767849622949825,
+              48.09043641500048
+            ],
+            "angle": 24.5
+          }
+        }
+      ]
+    },
+    "armAssembly": {
+      "method": "approved complete forearm, hand and elbow overlap widened 22% perpendicular to a fixed length axis",
+      "runtimeModule": "phone-rig.mjs",
+      "layerImage": "dasha-phone-rig.png",
+      "config": {
+        "panelWidth": 768,
+        "panelHeight": 1024,
+        "scale": 0.45275181723779856,
+        "x": 7.342159916926278,
+        "y": 37.49221183800623,
+        "lowerStart": 301,
+        "bodyCrop": [
+          177,
+          18,
+          461,
+          969
+        ],
+        "headWidth": 245,
+        "bodyPivot": [
+          401,
+          400
+        ],
+        "armPivot": [
+          344,
+          428
+        ],
+        "armCrop": [
+          276,
+          281,
+          389,
+          220
+        ],
+        "armScale": 0.568,
+        "baseAngle": -0.108,
+        "maxAngle": 0.065,
+        "strokeMs": 950,
+        "armImage": "dasha-phone-arm-full-rig.png",
+        "armAxis": [
+          317,
+          -144
+        ],
+        "armWidthScale": 1.22,
+        "armJointWidthScale": 1.22,
+        "armWidthStart": 20,
+        "armWidthEnd": 90
+      },
+      "atlasSampleAnglesRadians": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.025,
+        0.065,
+        0.015
+      ],
+      "forearmImage": "dasha-phone-arm-full-rig.png",
+      "approvedByUser": true
+    }
+  },
+  "katya": {
+    "image": "katya-phone-right.png",
+    "frameSize": [
+      384,
+      512
+    ],
+    "columns": 4,
+    "rows": 2,
+    "frameCount": 8,
+    "groundAnchor": [
+      192,
+      480
+    ],
+    "durationsMs": [
+      200,
+      280,
+      320,
+      450,
+      260,
+      260,
+      220,
+      700
+    ],
+    "loopStart": 4,
+    "idleDelayRangeMs": [
+      8000,
+      15000
+    ],
+    "phoneDurationRangeMs": [
+      3000,
+      5000
+    ],
+    "putAwayMs": 640,
+    "randomInitialIdlePhase": true,
+    "fixedHeadOutsideEyes": true,
+    "fixedLegsAndShoes": true,
+    "eyeRect": [
+      198,
+      90,
+      238,
+      115
+    ],
+    "gazeRegistration": [
+      0,
+      0
+    ],
+    "fixedGlasses": false,
+    "heldPhone": {
+      "referenceFrame": 4,
+      "target": {
+        "center": [
+          261.9682062273571,
+          181.11673692358568
+        ],
+        "size": [
+          16.02944056263391,
+          48.74105934613554
+        ],
+        "angle": 14.0
+      },
+      "measurements": [
+        {
+          "frame": 3,
+          "after": {
+            "center": [
+              261.9682062273571,
+              181.11673692358568
+            ],
+            "size": [
+              16.02944056263391,
+              48.74105934613554
+            ],
+            "angle": 14.0
+          }
+        },
+        {
+          "frame": 4,
+          "after": {
+            "center": [
+              261.9682062273571,
+              181.11673692358568
+            ],
+            "size": [
+              16.02944056263391,
+              48.74105934613554
+            ],
+            "angle": 14.0
+          }
+        },
+        {
+          "frame": 5,
+          "after": {
+            "center": [
+              261.9682062273571,
+              181.11673692358568
+            ],
+            "size": [
+              16.02944056263391,
+              48.74105934613554
+            ],
+            "angle": 14.0
+          }
+        },
+        {
+          "frame": 6,
+          "after": {
+            "center": [
+              261.9682062273571,
+              181.11673692358568
+            ],
+            "size": [
+              16.02944056263391,
+              48.74105934613554
+            ],
+            "angle": 14.0
+          }
+        },
+        {
+          "frame": 7,
+          "after": {
+            "center": [
+              261.9682062273571,
+              181.11673692358568
+            ],
+            "size": [
+              16.02944056263391,
+              48.74105934613554
+            ],
+            "angle": 14.0
+          }
+        }
+      ]
+    },
+    "armAssembly": {
+      "method": "single intact forearm rotates around an overlapping elbow joint; stationary complete body and supporting hand",
+      "runtimeModule": "phone-rig.mjs",
+      "layerImage": "katya-phone-rig.png",
+      "panelSize": [
+        768,
+        1024
+      ],
+      "bodyPivot": [
+        426,
+        438
+      ],
+      "armPivot": [
+        264,
+        449
+      ],
+      "angleRangeRadians": [
+        0,
+        0.065
+      ],
+      "strokeDurationMs": 950,
+      "atlasSampleAnglesRadians": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.025,
+        0.065,
+        0.015
+      ]
+    }
+  }
+}

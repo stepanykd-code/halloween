@@ -1,0 +1,37 @@
+Built-in image_gen. Fixed-head registration and final idle pose use native game rendering.
+
+DASHA INITIAL PROMPT
+Create a game animation sprite sheet based ONLY on the attached ACTUAL IN-GAME CHARACTER MODEL. Identity, age, facial features, hair, outfit, slim body proportions, hand and shoe sizes must match the reference. Same right-facing three-quarter side view.
+Output EXACT1536x1024,4columns x2rows,8poses read left-to-right then next row; each cell384x512, transparent background, fully opaque character, no glow/haze/shadows/labels/lines. Every character and every hand/shoe must fit fully within its own cell, with10px side margins. Ground at cell y480. Same absolute anatomy scale in all poses: seated pose must NOT enlarge head or torso. Standing height436px, head approximately100x95px, slender jacket rather than oversized cartoon torso.
+Animation:
+1 loses balance backwards, knees start bending, BOTH arms reach behind, eyes widen, raised eyebrows, small surprised open mouth.
+2 hips drop with knees deeply bent, hands continue reaching behind.
+3 bottom nearly reaches floor, legs extend forward to RIGHT, both palms reach floor BEHIND hips to LEFT.
+4 lands on BOTTOM, BOTH palms visibly flat and separated on ground BEHIND hips, elbows bent to cushion, torso upright slightly back, NEVER lying on back; brief tight-mouthed wince.
+5 IMMEDIATELY pushes through BOTH same planted palms, hips rise and feet draw under body; focused eyebrows, mouth closed.
+6 transfers weight onto both feet, low crouch rising, hands leave floor.
+7 straightens to nearly standing, arms relax.
+8 neutral standing exact reference proportions and clothing.
+Keep head, face, torso width, sleeves, hands, leg thickness and sneakers anatomically consistent across all8frames.
+Dasha: brown ponytail, bright raspberry-pink LONG puffer coat, pale patterned grey/white top, slim GREY trousers, BEIGE sneakers. Use her current reference, not Katya.
+
+HAND CORRECTION
+Precise small edit of the attached8-frame sheet. Preserve EVERYTHING exactly (all poses, faces, proportions, outfit, framing,4x2grid1536x1024) except this missing support hand: in cells3,4and5 draw the FAR arm reaching BEHIND her hips and its second palm flat on the SAME ground, a little closer to her hip than the already visible near palm. Both palms must be separately visible beside each other, with a plausible continuous far sleeve/wrist attached behind the torso. Keep existing near hand unchanged. The two hands support her seated bottom and push up immediately. Do not add more than two arms total. Keep true alpha transparency. No text/background/glow. This is a missing-limb correction only.
+
+KATYA INITIAL PROMPT
+Create a game animation sprite sheet based ONLY on the attached ACTUAL IN-GAME CHARACTER MODEL. Identity, age, facial features, hair, outfit, slim body proportions, hand and shoe sizes must match the reference. Same right-facing three-quarter side view.
+Output EXACT1536x1024,4columns x2rows,8poses read left-to-right then next row; each cell384x512, transparent background, fully opaque character, no glow/haze/shadows/labels/lines. Every character and every hand/shoe must fit fully within its own cell, with10px side margins. Ground at cell y480. Same absolute anatomy scale in all poses: seated pose must NOT enlarge head or torso. Standing height436px, head approximately100x95px, slender jacket rather than oversized cartoon torso.
+Animation:
+1 loses balance backwards, knees start bending, BOTH arms reach behind, eyes widen, raised eyebrows, small surprised open mouth.
+2 hips drop with knees deeply bent, hands continue reaching behind.
+3 bottom nearly reaches floor, legs extend forward to RIGHT, both palms reach floor BEHIND hips to LEFT.
+4 lands on BOTTOM, BOTH palms visibly flat and separated on ground BEHIND hips, elbows bent to cushion, torso upright slightly back, NEVER lying on back; brief tight-mouthed wince.
+5 IMMEDIATELY pushes through BOTH same planted palms, hips rise and feet draw under body; focused eyebrows, mouth closed.
+6 transfers weight onto both feet, low crouch rising, hands leave floor.
+7 straightens to nearly standing, arms relax.
+8 neutral standing exact reference proportions and clothing.
+Keep head, face, torso width, sleeves, hands, leg thickness and sneakers anatomically consistent across all8frames.
+Katya FIRST original outfit: brown ponytail, PALE pink SHORT puffer jacket over raspberry pink hoodie, PINK jogger trousers and chunky PINK/WHITE sneakers. Keep her original human girl appearance. Use her current reference, not Dasha or any cat character.
+
+HAND CORRECTION
+Precise small edit of the attached8-frame sheet. Preserve EVERYTHING exactly (all poses, faces, proportions, outfit, framing,4x2grid1536x1024) except this missing support hand: in cells3,4and5 draw the FAR arm reaching BEHIND her hips and its second palm flat on the SAME ground, a little closer to her hip than the already visible near palm. Both palms must be separately visible beside each other, with a plausible continuous far sleeve/wrist attached behind the torso. Keep existing near hand unchanged. The two hands support her seated bottom and push up immediately. Do not add more than two arms total. Keep true alpha transparency. No text/background/glow. This is a missing-limb correction only.

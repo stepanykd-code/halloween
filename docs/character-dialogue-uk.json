@@ -1,0 +1,953 @@
+{
+  "version": 1,
+  "locale": "uk-UA",
+  "profiles": {
+    "slavik": {
+      "name": "Славік",
+      "nickname": "SlaVStaR",
+      "aliases": [],
+      "ageRange": [
+        12,
+        14
+      ],
+      "color": "#65bff2",
+      "voiceNotes": "Спокійний, небагатослівний, прямий. Енциклопедичні знання; іноді буквально розуміє побутові та соціальні речі. Брат Даші. Може мовчати перед відповіддю."
+    },
+    "dasha": {
+      "name": "Даша",
+      "nickname": "PurpleDog",
+      "aliases": [],
+      "ageRange": [
+        12,
+        14
+      ],
+      "color": "#f080bd",
+      "voiceNotes": "Говірка, емоційна й грайлива. Любить милі словотворення, кривляння та дружній тролінг. У науках розбирається слабше; може схитрувати, підлеститися й захищати власну вигадку. Сестра Славіка."
+    },
+    "katya": {
+      "name": "Катя",
+      "nickname": "Katy Cool",
+      "aliases": [
+        "Чорна пантера"
+      ],
+      "ageRange": [
+        12,
+        14
+      ],
+      "color": "#b89afa",
+      "voiceNotes": "Говірка, цілеспрямована, наполеглива. Любить керувати й досягати свого; говорить розгорнуто, уміє переконувати та подавати свій задум як спільну вигоду. Звичайні знання про світ."
+    }
+  },
+  "lines": [
+    {
+      "id": "slavik.idle.1",
+      "speaker": "slavik",
+      "trigger": "idle",
+      "text": "Я поки подивлюся."
+    },
+    {
+      "id": "slavik.idle.2",
+      "speaker": "slavik",
+      "trigger": "idle",
+      "text": "Можна й помовчати."
+    },
+    {
+      "id": "slavik.idle.3",
+      "speaker": "slavik",
+      "trigger": "idle",
+      "text": "Місяць відбиває сонячне світло."
+    },
+    {
+      "id": "slavik.walk.1",
+      "speaker": "slavik",
+      "trigger": "walk",
+      "text": "Тут можна пройти."
+    },
+    {
+      "id": "slavik.walk.2",
+      "speaker": "slavik",
+      "trigger": "walk",
+      "text": "Я перевірю далі."
+    },
+    {
+      "id": "slavik.walk.3",
+      "speaker": "slavik",
+      "trigger": "walk",
+      "text": "Дорога та сама. Напрямок інший."
+    },
+    {
+      "id": "slavik.jump.1",
+      "speaker": "slavik",
+      "trigger": "jump",
+      "text": "Приземлився."
+    },
+    {
+      "id": "slavik.jump.2",
+      "speaker": "slavik",
+      "trigger": "jump",
+      "text": "Висоти вистачило."
+    },
+    {
+      "id": "slavik.jump.3",
+      "speaker": "slavik",
+      "trigger": "jump",
+      "text": "Гравітація працює."
+    },
+    {
+      "id": "slavik.crouch.1",
+      "speaker": "slavik",
+      "trigger": "crouch",
+      "text": "Так мене гірше видно."
+    },
+    {
+      "id": "slavik.crouch.2",
+      "speaker": "slavik",
+      "trigger": "crouch",
+      "text": "Я перевіряю, що внизу."
+    },
+    {
+      "id": "slavik.crouch.3",
+      "speaker": "slavik",
+      "trigger": "crouch",
+      "text": "Можна встати?"
+    },
+    {
+      "id": "slavik.fall.1",
+      "speaker": "slavik",
+      "trigger": "fall",
+      "text": "Земля тверда."
+    },
+    {
+      "id": "slavik.fall.2",
+      "speaker": "slavik",
+      "trigger": "fall",
+      "text": "Я не планував падати."
+    },
+    {
+      "id": "slavik.fall.3",
+      "speaker": "slavik",
+      "trigger": "fall",
+      "text": "Уже встав. Усе нормально."
+    },
+    {
+      "id": "slavik.phone.1",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Перевірю повідомлення."
+    },
+    {
+      "id": "slavik.phone.2",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Зараз дочитаю."
+    },
+    {
+      "id": "slavik.phone.3",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Тут є карта."
+    },
+    {
+      "id": "dasha.idle.1",
+      "speaker": "dasha",
+      "trigger": "idle",
+      "text": "Тут так тихенько, що аж хочеться когось легенько налякати."
+    },
+    {
+      "id": "dasha.idle.2",
+      "speaker": "dasha",
+      "trigger": "idle",
+      "text": "Братику, ти мовчиш чи вже щось дуже розумне придумав?"
+    },
+    {
+      "id": "dasha.idle.3",
+      "speaker": "dasha",
+      "trigger": "idle",
+      "text": "Цей гарбуз на мене дивиться. Я йому теж язика покажу."
+    },
+    {
+      "id": "dasha.walk.1",
+      "speaker": "dasha",
+      "trigger": "walk",
+      "text": "Я просто йду красиво. Пригоди самі нехай мене наздоганяють."
+    },
+    {
+      "id": "dasha.walk.2",
+      "speaker": "dasha",
+      "trigger": "walk",
+      "text": "О, доріженька! Тільки хай вона веде не до контрольної."
+    },
+    {
+      "id": "dasha.walk.3",
+      "speaker": "dasha",
+      "trigger": "walk",
+      "text": "Якщо там щось страшне, я першою його... побачу здалеку."
+    },
+    {
+      "id": "dasha.jump.1",
+      "speaker": "dasha",
+      "trigger": "jump",
+      "text": "Опа! Я тепер ще й стрибученька!"
+    },
+    {
+      "id": "dasha.jump.2",
+      "speaker": "dasha",
+      "trigger": "jump",
+      "text": "Я майже літала. От майже — це теж результат!"
+    },
+    {
+      "id": "dasha.jump.3",
+      "speaker": "dasha",
+      "trigger": "jump",
+      "text": "Братику, тільки без лекції про те, чому я не злетіла."
+    },
+    {
+      "id": "dasha.crouch.1",
+      "speaker": "dasha",
+      "trigger": "crouch",
+      "text": "Мене немає. Тут просто дуже симпатичний кущик."
+    },
+    {
+      "id": "dasha.crouch.2",
+      "speaker": "dasha",
+      "trigger": "crouch",
+      "text": "Я не ховаюся, я роздивляюся все з нового ракурсику."
+    },
+    {
+      "id": "dasha.crouch.3",
+      "speaker": "dasha",
+      "trigger": "crouch",
+      "text": "Якщо тихенько присісти, проблеми мене не помітять. Напевно."
+    },
+    {
+      "id": "dasha.fall.1",
+      "speaker": "dasha",
+      "trigger": "fall",
+      "text": "Це було заплановано! Ну... тепер уже було."
+    },
+    {
+      "id": "dasha.fall.2",
+      "speaker": "dasha",
+      "trigger": "fall",
+      "text": "Я перевіряла, чи м’яка тут дорога. Не м’якенька."
+    },
+    {
+      "id": "dasha.fall.3",
+      "speaker": "dasha",
+      "trigger": "fall",
+      "text": "Я приземлилася. Оцінки суддів не приймаються!"
+    },
+    {
+      "id": "dasha.phone.1",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Ой, одне повідомленько. І ще одне — воно саме прийшло!"
+    },
+    {
+      "id": "dasha.phone.2",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Я не зависла в телефоні. Я шукаю щось дуже потрібненьке."
+    },
+    {
+      "id": "dasha.phone.3",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Братику, а якщо карта крутиться, це ми заблукали чи вона?"
+    },
+    {
+      "id": "katya.idle.1",
+      "speaker": "katya",
+      "trigger": "idle",
+      "text": "Пропоную так: спочатку оглянемо містечко, а потім усі разом вирішимо, куди я поведу нас далі."
+    },
+    {
+      "id": "katya.idle.2",
+      "speaker": "katya",
+      "trigger": "idle",
+      "text": "Якщо ніхто не має кращого плану, беремо мій. Але гарні доповнення я, звісно, вислухаю."
+    },
+    {
+      "id": "katya.idle.3",
+      "speaker": "katya",
+      "trigger": "idle",
+      "text": "Я вже готова до пригоди. Залишилося переконатися, що моя команда теж готова."
+    },
+    {
+      "id": "katya.walk.1",
+      "speaker": "katya",
+      "trigger": "walk",
+      "text": "Ідіть за мною: я оберу дорогу, а ви скажете, якщо помітите щось цікаве. Так буде швидше."
+    },
+    {
+      "id": "katya.walk.2",
+      "speaker": "katya",
+      "trigger": "walk",
+      "text": "Давайте дійдемо до наступного ліхтаря, а вже там вирішимо, чи справді нам хотілося повертатися."
+    },
+    {
+      "id": "katya.walk.3",
+      "speaker": "katya",
+      "trigger": "walk",
+      "text": "Я знаю, куди хочу потрапити. Тепер залишилося знайти дорогу, яка з цим погодиться."
+    },
+    {
+      "id": "katya.jump.1",
+      "speaker": "katya",
+      "trigger": "jump",
+      "text": "Ось бачите, пройти можна! Тепер повторюємо спокійно, без змагання, хто голосніше скрикне."
+    },
+    {
+      "id": "katya.jump.2",
+      "speaker": "katya",
+      "trigger": "jump",
+      "text": "Стрибок вийшов, тому вважаю, що цю частину мого плану ми успішно перевірили."
+    },
+    {
+      "id": "katya.jump.3",
+      "speaker": "katya",
+      "trigger": "jump",
+      "text": "Якщо стрибнути ще раз, я зроблю краще. Перший був просто, щоб зрозуміти відстань."
+    },
+    {
+      "id": "katya.crouch.1",
+      "speaker": "katya",
+      "trigger": "crouch",
+      "text": "Я зараз роздивлюся, що тут унизу, а ви поки нічого не чіпайте. Потім поміняємося."
+    },
+    {
+      "id": "katya.crouch.2",
+      "speaker": "katya",
+      "trigger": "crouch",
+      "text": "Пропоную посидіти тихо. Тільки всі разом, інакше весь сенс мого чудового задуму зникне."
+    },
+    {
+      "id": "katya.crouch.3",
+      "speaker": "katya",
+      "trigger": "crouch",
+      "text": "Це зручна позиція для спостереження. Якщо знайду щось цікаве, першою розповідаю я."
+    },
+    {
+      "id": "katya.fall.1",
+      "speaker": "katya",
+      "trigger": "fall",
+      "text": "Так, цей момент пропускаємо. Я вже піднімаюся, а ви поки подумайте, куди йдемо далі."
+    },
+    {
+      "id": "katya.fall.2",
+      "speaker": "katya",
+      "trigger": "fall",
+      "text": "Я впала, зате тепер точно знаю, де слизько. Тож слухайте мене й обходьте це місце."
+    },
+    {
+      "id": "katya.fall.3",
+      "speaker": "katya",
+      "trigger": "fall",
+      "text": "Оцінюємо не падіння, а те, як швидко я знову встала. Ось це вже справедливо."
+    },
+    {
+      "id": "katya.phone.1",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Зараз звірю маршрут. Можете поки запропонувати свої варіанти — я порівняю їх зі своїм."
+    },
+    {
+      "id": "katya.phone.2",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Напишу, що ми на місці, щоб потім усі не запитували одночасно. Це називається думати наперед."
+    },
+    {
+      "id": "katya.phone.3",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Я тільки перевірю повідомлення, і продовжуємо. Давайте без того, щоб за цей час розбігтися."
+    },
+    {
+      "id": "slavik.phone.4",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Це старе фото."
+    },
+    {
+      "id": "slavik.phone.5",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Час на відео не збігається."
+    },
+    {
+      "id": "slavik.phone.6",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Збережу координати."
+    },
+    {
+      "id": "slavik.phone.7",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Тут немає джерела."
+    },
+    {
+      "id": "slavik.phone.8",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Це ще не доказ."
+    },
+    {
+      "id": "slavik.phone.9",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Перевірю адресу."
+    },
+    {
+      "id": "slavik.phone.10",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Схоже на відблиск."
+    },
+    {
+      "id": "slavik.phone.11",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Збільшу зображення."
+    },
+    {
+      "id": "slavik.phone.12",
+      "speaker": "slavik",
+      "trigger": "phone",
+      "text": "Порівняю дві фотографії."
+    },
+    {
+      "id": "dasha.phone.4",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "У чаті вже три версії. Моя, звісно, найцікавішенька."
+    },
+    {
+      "id": "dasha.phone.5",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Ой, мені надіслали привиденятко! А ні, це пакет. Але дуже виразний."
+    },
+    {
+      "id": "dasha.phone.6",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Я просто збільшила фото. Воно саме стало страшнючим!"
+    },
+    {
+      "id": "dasha.phone.7",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "У мене на карті все зрозуміло. Тільки незрозуміло, де ми."
+    },
+    {
+      "id": "dasha.phone.8",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Зараз зроблю серйозне обличчя для фото. Все, не смішіть мене!"
+    },
+    {
+      "id": "dasha.phone.9",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Це повідомлення я прочитала двічі. Раптом удруге там уже не страшно."
+    },
+    {
+      "id": "dasha.phone.10",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Тут пишуть «не панікуйте». Ну все, тепер я дуже спокійненька."
+    },
+    {
+      "id": "dasha.phone.11",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Я поставила ліхтарик на максимум. Нехай темрява сама мене боїться."
+    },
+    {
+      "id": "dasha.phone.12",
+      "speaker": "dasha",
+      "trigger": "phone",
+      "text": "Надішлю фоточку. Без підпису «ми точно не заблукали», бо це підозріленько."
+    },
+    {
+      "id": "katya.phone.4",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Я позначу це місце на карті, щоб потім не сперечатися, де саме ми бачили дивне світло."
+    },
+    {
+      "id": "katya.phone.5",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Зараз надішлю всім одну й ту саму точку. Тоді вже ніхто не скаже, що неправильно зрозумів мій план."
+    },
+    {
+      "id": "katya.phone.6",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Тут багато повідомлень про дивні звуки, але спочатку перевіримо те місце, до якого я вже знайшла дорогу."
+    },
+    {
+      "id": "katya.phone.7",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Я зроблю окрему нотатку для наших знахідок. Записуємо те, що бачили, а версії обговорюємо потім."
+    },
+    {
+      "id": "katya.phone.8",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Сфотографую зараз, а потім порівняємо. Так буде простіше довести, що я помітила це першою."
+    },
+    {
+      "id": "katya.phone.9",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Дайте мені хвилинку: я перевірю маршрут і виберу такий, щоб ми ще й щось цікаве знайшли дорогою."
+    },
+    {
+      "id": "katya.phone.10",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "У чаті радять повертатися. Я пропоную спочатку зрозуміти причину, а вже тоді вирішувати, куди йти."
+    },
+    {
+      "id": "katya.phone.11",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Я зберегла повідомлення, тому тепер зможу спокійно пояснити, чому запропонувала саме цей шлях."
+    },
+    {
+      "id": "katya.phone.12",
+      "speaker": "katya",
+      "trigger": "phone",
+      "text": "Зараз звірю, що пишуть у чаті, з тим, що ми бачили самі. Потім вирішимо разом — у мене вже є пропозиція."
+    }
+  ],
+  "conversations": [
+    {
+      "id": "poltava-halloween",
+      "trigger": "intro",
+      "turns": [
+        {
+          "id": "dialogue.poltava-halloween.1",
+          "speaker": "katya",
+          "text": "У Полтаві на Хелоуїн завжди було дивно, але сьогодні ліхтарі блимають самі, а з порожніх дворів хтось нас кличе."
+        },
+        {
+          "id": "dialogue.poltava-halloween.2",
+          "speaker": "dasha",
+          "text": "І моя тінь щойно повернула не туди! Братику, скажи, що вона просто заблукала."
+        },
+        {
+          "id": "dialogue.poltava-halloween.3",
+          "speaker": "slavik",
+          "text": "Тінь сама не повертає.",
+          "pauseBeforeMs": 1500
+        },
+        {
+          "id": "dialogue.poltava-halloween.4",
+          "speaker": "dasha",
+          "text": "Дякую, братику. Одразу стало спокійнісінько."
+        },
+        {
+          "id": "dialogue.poltava-halloween.5",
+          "speaker": "katya",
+          "text": "У міському чаті теж пишуть про дивні звуки й речі, які рухаються без людей. Треба з’ясувати, що тут коїться."
+        },
+        {
+          "id": "dialogue.poltava-halloween.6",
+          "speaker": "slavik",
+          "text": "Спочатку перевіримо, що бачили.",
+          "pauseBeforeMs": 1500
+        },
+        {
+          "id": "dialogue.poltava-halloween.7",
+          "speaker": "dasha",
+          "text": "Тобто підемо туди, де нас хтось кличе? Я за. Але дууже не перша."
+        },
+        {
+          "id": "dialogue.poltava-halloween.8",
+          "speaker": "katya",
+          "text": "Тоді тримаємося разом, перевіряємо дивні місця й шукаємо причину. Я простежу, щоб ніхто не загубився."
+        },
+        {
+          "id": "dialogue.poltava-halloween.9",
+          "speaker": "slavik",
+          "text": "Почнемо з ліхтарів.",
+          "pauseBeforeMs": 1500
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.team.1",
+          "speaker": "katya",
+          "text": "Команда, збираємося! Усі тут? Я поки пропоную почати з ліхтарів."
+        },
+        {
+          "id": "dialogue.team.2",
+          "speaker": "dasha",
+          "text": "Я на місці! А за назву команди видають смаколики?"
+        },
+        {
+          "id": "dialogue.team.3",
+          "speaker": "slavik",
+          "text": "Ми ще не маємо назви.",
+          "pauseBeforeMs": 1300
+        },
+        {
+          "id": "dialogue.team.4",
+          "speaker": "katya",
+          "text": "Тоді назвемося дорогою. Головне, що команда вже є, і вона йде зі мною."
+        }
+      ]
+    },
+    {
+      "id": "nickname",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.nickname.1",
+          "speaker": "katya",
+          "text": "Я готова вести команду. Особливо коли вже маю план, а ви ще вирішуєте, куди хочете піти."
+        },
+        {
+          "id": "dialogue.nickname.2",
+          "speaker": "dasha",
+          "text": "Ти знаєш дорогу, чи ми зараз дружно перевіримо?"
+        },
+        {
+          "id": "dialogue.nickname.3",
+          "speaker": "katya",
+          "text": "Саме тому я й зібрала команду: разом перевіряти набагато цікавіше."
+        }
+      ]
+    },
+    {
+      "id": "moon",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.moon.1",
+          "speaker": "dasha",
+          "text": "Місяць сьогодні як велетенський млинець. Може, він тому й жовтенький?"
+        },
+        {
+          "id": "dialogue.moon.2",
+          "speaker": "slavik",
+          "text": "Він не з тіста."
+        },
+        {
+          "id": "dialogue.moon.3",
+          "speaker": "dasha",
+          "text": "Я знаю! Але з джемом було б переконливіше."
+        }
+      ]
+    },
+    {
+      "id": "silence",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.silence.1",
+          "speaker": "dasha",
+          "text": "Братику, ти чого мовчиш? Я вже за двох набалакала."
+        },
+        {
+          "id": "dialogue.silence.2",
+          "speaker": "slavik",
+          "text": "Я слухаю."
+        },
+        {
+          "id": "dialogue.silence.3",
+          "speaker": "dasha",
+          "text": "Ну добре. Тоді слухай, зараз буде найцікавішеньке!"
+        }
+      ]
+    },
+    {
+      "id": "brother",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.brother.1",
+          "speaker": "dasha",
+          "text": "Братику, ну ти ж мій найрозумніший братик. Перевіриш першим, що там за рогом?"
+        },
+        {
+          "id": "dialogue.brother.2",
+          "speaker": "slavik",
+          "text": "Ти хочеш, щоб я пішов першим."
+        },
+        {
+          "id": "dialogue.brother.3",
+          "speaker": "dasha",
+          "text": "І розумний, і здогадливий. Узагалі жодного шансику!"
+        }
+      ]
+    },
+    {
+      "id": "brave",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.brave.1",
+          "speaker": "katya",
+          "text": "Давайте чесно: якщо комусь страшно, кажемо одразу. Я тоді вирішу, як ми всі разом це обійдемо."
+        },
+        {
+          "id": "dialogue.brave.2",
+          "speaker": "dasha",
+          "text": "Мені не страшно. Я просто хочу йти ближче до вас. Дуже близенько."
+        },
+        {
+          "id": "dialogue.brave.3",
+          "speaker": "katya",
+          "text": "Домовилися. Називатимемо це щільним строєм, якщо тобі так зручніше."
+        }
+      ]
+    },
+    {
+      "id": "pumpkin",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.pumpkin.1",
+          "speaker": "dasha",
+          "text": "Якщо гарбуз мені усміхається, я мушу усміхнутися у відповідь?"
+        },
+        {
+          "id": "dialogue.pumpkin.2",
+          "speaker": "slavik",
+          "text": "Він нічого від тебе не очікує.",
+          "pauseBeforeMs": 1700
+        },
+        {
+          "id": "dialogue.pumpkin.3",
+          "speaker": "dasha",
+          "text": "От і чудово. Бо я вже йому підморгнула."
+        }
+      ]
+    },
+    {
+      "id": "route",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.route.1",
+          "speaker": "katya",
+          "text": "Обираємо разом: можемо піти до ліхтаря або до он того дуже гарного ліхтаря, який ближче до мого маршруту."
+        },
+        {
+          "id": "dialogue.route.2",
+          "speaker": "dasha",
+          "text": "У тебе обидва варіанти якісь підозріло твої."
+        },
+        {
+          "id": "dialogue.route.3",
+          "speaker": "katya",
+          "text": "Зате я продумала відразу два. Вибір усе одно за вами."
+        }
+      ]
+    },
+    {
+      "id": "shadow",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.shadow.1",
+          "speaker": "dasha",
+          "text": "Моя тінь така довга! Може, я все-таки трохи підросла?"
+        },
+        {
+          "id": "dialogue.shadow.2",
+          "speaker": "slavik",
+          "text": "Це через положення ліхтаря."
+        },
+        {
+          "id": "dialogue.shadow.3",
+          "speaker": "dasha",
+          "text": "А можна я до ранку побуду височенькою? Без уточнень."
+        }
+      ]
+    },
+    {
+      "id": "whisper",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.whisper.1",
+          "speaker": "katya",
+          "text": "Тут краще пройти тихо. Якщо всі послухають мене хоча б пів хвилини, у нас вийде чудова розвідка."
+        },
+        {
+          "id": "dialogue.whisper.2",
+          "speaker": "dasha",
+          "text": "Я вмію тихо. Тихенько-тихенько. От зараз уже починаю."
+        },
+        {
+          "id": "dialogue.whisper.3",
+          "speaker": "katya",
+          "text": "Ти можеш просто кивнути. Це теж цілком зараховується."
+        }
+      ]
+    },
+    {
+      "id": "agree",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.agree.1",
+          "speaker": "katya",
+          "text": "Давайте домовимося: спочатку спробуємо мій спосіб, а якщо не вийде, обговоримо ваші пропозиції."
+        },
+        {
+          "id": "dialogue.agree.2",
+          "speaker": "slavik",
+          "text": "Можна одразу обговорити."
+        },
+        {
+          "id": "dialogue.agree.3",
+          "speaker": "dasha",
+          "text": "О, братик знайшов коротший маршрут до суперечки!"
+        }
+      ]
+    },
+    {
+      "id": "wind",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.wind.1",
+          "speaker": "dasha",
+          "text": "Чуєте? Це вітер чи хтось робить «уууу» дуже старанно?"
+        },
+        {
+          "id": "dialogue.wind.2",
+          "speaker": "slavik",
+          "text": "Можливо, вітер."
+        },
+        {
+          "id": "dialogue.wind.3",
+          "speaker": "dasha",
+          "text": "Навіть вітер тут у ролі. А я без костюмика!"
+        }
+      ]
+    },
+    {
+      "id": "literal",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.literal.1",
+          "speaker": "dasha",
+          "text": "Братику, зроби вигляд, що ти страшенно здивований."
+        },
+        {
+          "id": "dialogue.literal.2",
+          "speaker": "slavik",
+          "text": "Чим саме?",
+          "pauseBeforeMs": 1800
+        },
+        {
+          "id": "dialogue.literal.3",
+          "speaker": "dasha",
+          "text": "Та не чимось! Просто оченята ось так — ого!"
+        }
+      ]
+    },
+    {
+      "id": "panther",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.panther.1",
+          "speaker": "katya",
+          "text": "Я обираю тихий підхід. Тому я йду попереду, а ви стежите, щоб позаду все було добре."
+        },
+        {
+          "id": "dialogue.panther.2",
+          "speaker": "dasha",
+          "text": "А якщо позаду цікавіше? Можна ми тоді станемо попереду?"
+        },
+        {
+          "id": "dialogue.panther.3",
+          "speaker": "katya",
+          "text": "Тоді я розвернуся. Бачиш, я вже передбачила зміну плану."
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.message.1",
+          "speaker": "dasha",
+          "text": "Я зараз тільки відповім. Ой, а вони знову щось написали."
+        },
+        {
+          "id": "dialogue.message.2",
+          "speaker": "katya",
+          "text": "Напиши, що ти зайнята пригодою. Це і правда, і звучить набагато цікавіше, ніж просто «потім»."
+        },
+        {
+          "id": "dialogue.message.3",
+          "speaker": "dasha",
+          "text": "О! Можна ще додати «дуже небезпечненькою»?"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "trigger": "ambient",
+      "turns": [
+        {
+          "id": "dialogue.science.1",
+          "speaker": "dasha",
+          "text": "Якщо я заплющу очі, страшне мене не побачить. Усе, я придумала."
+        },
+        {
+          "id": "dialogue.science.2",
+          "speaker": "slavik",
+          "text": "Тоді не бачитимеш ти."
+        },
+        {
+          "id": "dialogue.science.3",
+          "speaker": "dasha",
+          "text": "Мені моя версія більше подобалася."
+        },
+        {
+          "id": "dialogue.science.4",
+          "speaker": "katya",
+          "text": "Тоді лишаємо очі відкритими й ідемо разом. Мій план працює навіть без заплющування."
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "id": "poltava-halloween",
+    "city": "Полтава",
+    "premise": "На Хелоуїн у вигаданій ігровій Полтаві почали відбуватися паранормальні явища. Діти вирішують разом з’ясувати причину.",
+    "startingPositions": {
+      "slavik": {
+        "x": 590,
+        "facing": 1
+      },
+      "dasha": {
+        "x": 850,
+        "facing": -1
+      },
+      "katya": {
+        "x": 1040,
+        "facing": -1
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+Mode: built-in image_gen. Three phone sprite sheet generations, followed by three eye-gaze edits, transparent_background=true.
+Final assets: phone-animation-game/{slavik,dasha,katya}-phone-right.png.
+Technical registration keeps the approved standing head silhouette, legs and shoes. Eye expressions are from the generated gaze edits. Eight frames: pocket sequence 0–3 once, swipe cycle 4–7. Idle delay: 8000–15000ms per character, phone activity: 3000–5000ms, followed by another randomized idle interval. Initial idle frames and phases are randomized.
+
+SLAVIK — PHONE ACTION
+Use case: stylized-concept. Asset: a production 2D anime GAME SPRITE SHEET, exactly EIGHT full-body animation frames in a regular FOUR COLUMNS by TWO ROWS grid, row-major playback order. Reference image: the existing 4-by-2 idle sheet of ONE character. Preserve that character's identity, age, face, exact head size, full standing height, outfit, body proportions, clean cel-shaded style, camera, right-facing side / slight three-quarter side orientation and planted feet. Slavik: slim young boy with short brown hair and dark rectangular eyeglasses, teal-blue puffer jacket over a gray high-neck zip top, black trousers, dark trainers with gray-white soles and red trim.
+Animation: the character waits standing in place, takes a SMARTPHONE from the visible jacket pocket, lifts it in front of the lower chest, holds it upright in one hand and swipes the screen with the other hand's index finger. The phone has a dark slim rectangular case and a visible softly lit pale blue screen; no logos or readable text.
+EXACT FRAME CONTENT, left to right, top row then bottom:
+0: same quiet standing pose as the reference, arms low, hand beginning to move toward the jacket pocket, NO phone visible.
+1: visible hand reaches INTO the outer jacket pocket at the hip, elbow bending; no floating phone.
+2: hand withdraws the upright smartphone just above the hip/pocket; the OTHER hand starts lifting.
+3: smartphone is now upright at lower chest height in front of the torso, held in one hand, the other hand's index finger approaches the screen.
+4: same held phone, the index finger touches the LOWER part of the screen, starting an upward swipe.
+5: same held phone, index finger slides UP the screen midway.
+6: same held phone, index finger has reached the UPPER part of the screen, completing the upward swipe.
+7: same held phone, finger lifts and relaxes just beside the screen ready to repeat frames 4-7.
+Keep the head, neck, torso/back, legs and shoes locked to precisely the same positions and dimensions in ALL EIGHT cells. Feet stay perfectly planted on one identical baseline; NO walking, stepping, body bobbing, leaning, crouching, growing, shrinking, changing shoe size or camera angle. Only arms, hands, fingers and the smartphone move. Full-sized head and full-sized shoes must match the reference standing sprite. Maintain exactly two arms and two hands, clear natural anatomy. The phone is in front of the torso, safely below the chin.
+Eight equally sized cells, regular grid without visible borders, one complete character in each cell, identical camera scale and anchor, generous transparent cell padding, all hair and both soles visible. The silhouette in every cell must remain separate from neighboring cells. True transparent alpha background. No scenery, floor, ground shadow, glow around character, checkerboard, grid lines, arrows, frame numbers, labels, captions, watermark or additional objects. This is a frame-by-frame animation sequence, not a collage of varied camera shots.
+
+SLAVIK — EYE GAZE EDIT
+Use case: precise-object-edit. Edit this existing slavik EIGHT-FRAME smartphone game sprite sheet. Preserve the same 4 columns by 2 rows, identical characters, body positions, head size and head orientation, hair, faces, clothing, eyeglasses if present, arms, hand gestures, phones, legs, shoes, transparent background and framing.
+Make ONE essential correction to the EYES:
+In frames 0 and 1 (first two cells in top row), keep the ordinary forward-looking gaze.
+In frames 2 and 3 (last two cells in top row), the EYES must now look DOWN and to screen RIGHT directly at the smartphone being taken out and held.
+In ALL FOUR CELLS of the bottom row (frames 4,5,6,7), the EYES must unmistakably look DOWN at the blue SMARTPHONE SCREEN in the hands throughout the swipe action. Pupils / irises must be visibly lowered toward the bottom-right of the eye openings, with slightly lowered upper eyelids for a natural focused downward gaze. Eyes stay OPEN. The character must focus on the device below the face rather than staring horizontally forward or at the viewer. Match the exact established eye color, youthful face and anime linework. Keep eyeglass frames unchanged for the boy.
+Keep the head itself at the EXACT same size, angle and position in every cell; express the downward focus through the eyes and eyelids. Preserve all other art. No new objects, labels, text, glow, background fill, ground, borders or grid lines. Actual transparent alpha background. Exactly eight full-body cells as in the input.
+
+DASHA — PHONE ACTION
+Use case: stylized-concept. Asset: a production 2D anime GAME SPRITE SHEET, exactly EIGHT full-body animation frames in a regular FOUR COLUMNS by TWO ROWS grid, row-major playback order. Reference image: the existing 4-by-2 idle sheet of ONE character. Preserve that character's identity, age, face, exact head size, full standing height, outfit, body proportions, clean cel-shaded style, camera, right-facing side / slight three-quarter side orientation and planted feet. Dasha: young girl with long brown ponytail and fringe, bright hot-pink long puffer jacket over a light patterned top, gray trousers with dark side stripes, chunky beige trainers.
+Animation: the character waits standing in place, takes a SMARTPHONE from the visible jacket pocket, lifts it in front of the lower chest, holds it upright in one hand and swipes the screen with the other hand's index finger. The phone has a dark slim rectangular case and a visible softly lit pale blue screen; no logos or readable text.
+EXACT FRAME CONTENT, left to right, top row then bottom:
+0: same quiet standing pose as the reference, arms low, hand beginning to move toward the jacket pocket, NO phone visible.
+1: visible hand reaches INTO the outer jacket pocket at the hip, elbow bending; no floating phone.
+2: hand withdraws the upright smartphone just above the hip/pocket; the OTHER hand starts lifting.
+3: smartphone is now upright at lower chest height in front of the torso, held in one hand, the other hand's index finger approaches the screen.
+4: same held phone, the index finger touches the LOWER part of the screen, starting an upward swipe.
+5: same held phone, index finger slides UP the screen midway.
+6: same held phone, index finger has reached the UPPER part of the screen, completing the upward swipe.
+7: same held phone, finger lifts and relaxes just beside the screen ready to repeat frames 4-7.
+Keep the head, neck, torso/back, legs and shoes locked to precisely the same positions and dimensions in ALL EIGHT cells. Feet stay perfectly planted on one identical baseline; NO walking, stepping, body bobbing, leaning, crouching, growing, shrinking, changing shoe size or camera angle. Only arms, hands, fingers and the smartphone move. Full-sized head and full-sized shoes must match the reference standing sprite. Maintain exactly two arms and two hands, clear natural anatomy. The phone is in front of the torso, safely below the chin.
+Eight equally sized cells, regular grid without visible borders, one complete character in each cell, identical camera scale and anchor, generous transparent cell padding, all hair and both soles visible. The silhouette in every cell must remain separate from neighboring cells. True transparent alpha background. No scenery, floor, ground shadow, glow around character, checkerboard, grid lines, arrows, frame numbers, labels, captions, watermark or additional objects. This is a frame-by-frame animation sequence, not a collage of varied camera shots.
+
+DASHA — EYE GAZE EDIT
+Use case: precise-object-edit. Edit this existing dasha EIGHT-FRAME smartphone game sprite sheet. Preserve the same 4 columns by 2 rows, identical characters, body positions, head size and head orientation, hair, faces, clothing, eyeglasses if present, arms, hand gestures, phones, legs, shoes, transparent background and framing.
+Make ONE essential correction to the EYES:
+In frames 0 and 1 (first two cells in top row), keep the ordinary forward-looking gaze.
+In frames 2 and 3 (last two cells in top row), the EYES must now look DOWN and to screen RIGHT directly at the smartphone being taken out and held.
+In ALL FOUR CELLS of the bottom row (frames 4,5,6,7), the EYES must unmistakably look DOWN at the blue SMARTPHONE SCREEN in the hands throughout the swipe action. Pupils / irises must be visibly lowered toward the bottom-right of the eye openings, with slightly lowered upper eyelids for a natural focused downward gaze. Eyes stay OPEN. The character must focus on the device below the face rather than staring horizontally forward or at the viewer. Match the exact established eye color, youthful face and anime linework. Keep eyeglass frames unchanged for the boy.
+Keep the head itself at the EXACT same size, angle and position in every cell; express the downward focus through the eyes and eyelids. Preserve all other art. No new objects, labels, text, glow, background fill, ground, borders or grid lines. Actual transparent alpha background. Exactly eight full-body cells as in the input.
+
+KATYA — PHONE ACTION
+Use case: stylized-concept. Asset: a production 2D anime GAME SPRITE SHEET, exactly EIGHT full-body animation frames in a regular FOUR COLUMNS by TWO ROWS grid, row-major playback order. Reference image: the existing 4-by-2 idle sheet of ONE character. Preserve that character's identity, age, face, exact head size, full standing height, outfit, body proportions, clean cel-shaded style, camera, right-facing side / slight three-quarter side orientation and planted feet. Katya, ORIGINAL HUMAN design: younger girl with rounded youthful face, swept-back brown ponytail and visible forehead, pale blush-pink puffer over a deeper rose-pink zipped hoodie with white drawstrings, matching rose joggers, chunky pink-white-mauve strapped trainers. No cat ears, tail or neon design.
+Animation: the character waits standing in place, takes a SMARTPHONE from the visible jacket pocket, lifts it in front of the lower chest, holds it upright in one hand and swipes the screen with the other hand's index finger. The phone has a dark slim rectangular case and a visible softly lit pale blue screen; no logos or readable text.
+EXACT FRAME CONTENT, left to right, top row then bottom:
+0: same quiet standing pose as the reference, arms low, hand beginning to move toward the jacket pocket, NO phone visible.
+1: visible hand reaches INTO the outer jacket pocket at the hip, elbow bending; no floating phone.
+2: hand withdraws the upright smartphone just above the hip/pocket; the OTHER hand starts lifting.
+3: smartphone is now upright at lower chest height in front of the torso, held in one hand, the other hand's index finger approaches the screen.
+4: same held phone, the index finger touches the LOWER part of the screen, starting an upward swipe.
+5: same held phone, index finger slides UP the screen midway.
+6: same held phone, index finger has reached the UPPER part of the screen, completing the upward swipe.
+7: same held phone, finger lifts and relaxes just beside the screen ready to repeat frames 4-7.
+Keep the head, neck, torso/back, legs and shoes locked to precisely the same positions and dimensions in ALL EIGHT cells. Feet stay perfectly planted on one identical baseline; NO walking, stepping, body bobbing, leaning, crouching, growing, shrinking, changing shoe size or camera angle. Only arms, hands, fingers and the smartphone move. Full-sized head and full-sized shoes must match the reference standing sprite. Maintain exactly two arms and two hands, clear natural anatomy. The phone is in front of the torso, safely below the chin.
+Eight equally sized cells, regular grid without visible borders, one complete character in each cell, identical camera scale and anchor, generous transparent cell padding, all hair and both soles visible. The silhouette in every cell must remain separate from neighboring cells. True transparent alpha background. No scenery, floor, ground shadow, glow around character, checkerboard, grid lines, arrows, frame numbers, labels, captions, watermark or additional objects. This is a frame-by-frame animation sequence, not a collage of varied camera shots.
+
+KATYA — EYE GAZE EDIT
+Use case: precise-object-edit. Edit this existing katya EIGHT-FRAME smartphone game sprite sheet. Preserve the same 4 columns by 2 rows, identical characters, body positions, head size and head orientation, hair, faces, clothing, eyeglasses if present, arms, hand gestures, phones, legs, shoes, transparent background and framing.
+Make ONE essential correction to the EYES:
+In frames 0 and 1 (first two cells in top row), keep the ordinary forward-looking gaze.
+In frames 2 and 3 (last two cells in top row), the EYES must now look DOWN and to screen RIGHT directly at the smartphone being taken out and held.
+In ALL FOUR CELLS of the bottom row (frames 4,5,6,7), the EYES must unmistakably look DOWN at the blue SMARTPHONE SCREEN in the hands throughout the swipe action. Pupils / irises must be visibly lowered toward the bottom-right of the eye openings, with slightly lowered upper eyelids for a natural focused downward gaze. Eyes stay OPEN. The character must focus on the device below the face rather than staring horizontally forward or at the viewer. Match the exact established eye color, youthful face and anime linework. Keep eyeglass frames unchanged for the boy.
+Keep the head itself at the EXACT same size, angle and position in every cell; express the downward focus through the eyes and eyelids. Preserve all other art. No new objects, labels, text, glow, background fill, ground, borders or grid lines. Actual transparent alpha background. Exactly eight full-body cells as in the input.
