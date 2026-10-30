@@ -16,12 +16,13 @@ export function createDialogueDirector({random=Math.random,isAvailable=()=>true}
     queue=conversation.turns.map(line=>({...line,conversationId:conversation.id}));current=null;waitingUntil=clock+(queue[0].pauseBeforeMs??0);
     nextAmbientAt=Infinity;return true;
   }
-  function onEvent(speaker,trigger){
-    if(current||queue.length||clock<nextEventAt||!isAvailable(speaker))return false;
+  function onEvent(speaker,trigger,{priority=false}={}){
+    if(!isAvailable(speaker)||(!priority&&(current||queue.length||clock<nextEventAt)))return false;
     // Slavik often chooses silence; his siblings/friend speak more readily.
-    if(speaker==='slavik'&&trigger!=='fall'&&random()>.4)return false;
+    if(speaker==='slavik'&&!priority&&trigger!=='fall'&&random()>.4)return false;
     const choices=DIALOGUE_DATA.lines.filter(line=>line.speaker===speaker&&line.trigger===trigger);
     if(!choices.length)return false;
+    if(priority){current=null;queue=[];openingPending=false;}
     const key=speaker+'.'+trigger,line=pick(choices,lastLines.get(key));lastLines.set(key,line.id);
     queue=[line];waitingUntil=clock;nextEventAt=clock+11000;nextAmbientAt=Infinity;return true;
   }

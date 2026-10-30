@@ -1,0 +1,69 @@
+{
+  "status": "integrated-for-gameplay-test",
+  "artApproved": true,
+  "gameIntegrationApproved": true,
+  "sourceImage": "concept.png",
+  "renderEnvelope": {
+    "width": 192,
+    "height": 168
+  },
+  "jumpVerified": {
+    "peak": 171,
+    "flightDuration": 1.2666666666666666,
+    "horizontalSpeed": 320,
+    "nominalRange": 405.3333333333333
+  },
+  "motion": {
+    "nearestHero": true,
+    "anchoredBase": true,
+    "rigidPalmsAndFingers": true,
+    "maxLean": 4.6,
+    "maxLift": 0.8,
+    "format": "continuous native animation, embedded offline HTML"
+  },
+  "gameScale": 3,
+  "collider": {
+    "halfWidth": 64,
+    "height": 124,
+    "heroFootHalfWidth": 18
+  },
+  "logicalRenderEnvelope": {
+    "width": 64,
+    "height": 56
+  },
+  "heroColliderWidth": 36,
+  "integration": {
+    "onContact": "knock back opposite approach and play existing fall animation",
+    "onFailedJump": "same reaction",
+    "dialogue": [
+      "Славік: Руки із землі. Їх треба перестрибнути.",
+      "Даша: Ой, зелені хапусі! Ніжки вище, бо зараз ухоплять!",
+      "Катя: Тут проходимо стрибком: дочекайтеся зручного моменту й перестрибуйте, я покажу."
+    ]
+  },
+  "spawn": {
+    "screens": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "perScreenTarget": [
+      2,
+      3
+    ],
+    "protectedAreasMayHaveFewer": true,
+    "excludedScreens": [
+      1,
+      9,
+      10
+    ],
+    "minimumSpacing": 440,
+    "protectLandmarkParallax": true,
+    "randomFlipX": true,
+    "newLayoutOnReset": true
+  }
+}

@@ -1,22 +1,32 @@
 {
-  "version": "0.2.0",
-  "files": 57,
-  "images": 20,
+  "version": "0.3.0",
+  "files": 74,
+  "images": 25,
   "archiveCreated": false,
   "content": {
     "conversationCount": 17,
     "phoneLinesPerCharacter": 12,
     "locale": "uk-UA",
-    "city": "Полтава"
+    "city": "Полтава",
+    "mapScreens": 10,
+    "mapWidth": 16000,
+    "parallaxSpeeds": [
+      0.14,
+      0.5,
+      1
+    ]
   },
   "sourceHashes": {
-    "index.html": "f4857ec31ce24e9426141bcf74e38607bd57fed68b8a4e80b9c8769f00f69748",
-    "style.css": "881d72047b271ad689a539761413cf14075294a7e436757b4f6c8f3d280826c8",
-    "dialogue-data.mjs": "c09fe6505bb85b34a1e4dcbf4452ae816bb31f3c37131c4f6059ceb416eea904",
-    "dialogue.mjs": "569dd3ab2678fee5057c0df8e0954f68cb6eb788931628b89bfcc2d118de3a23",
-    "engine.mjs": "e7df4e82fe2d6f9f5d3a1f5b33685450a7f654c4d385ba679366781975fefd55",
+    "index.html": "347811d4e6adcfcad5443d1d15a6049e459e211bc2941796750f4b770e40b79b",
+    "style.css": "12a9f35a8f6aa994891d9297479945704666a2a6830787383041dcec261d2c09",
+    "dialogue-data.mjs": "7a1b8914bf0fdf34585dc3080bb87a3ef14f9b67651ad062ba98f8469fedfb7a",
+    "dialogue.mjs": "6a5acd653a4ebdbf79d324569752a45f1272375806e2f1df51e2b903adee3c8d",
+    "engine.mjs": "4eec4a559cf827440302160a6d2454507c6f1d9ad12b4527bb958c2d30deb05a",
     "phone-rig.mjs": "b1ec851ac2df2eaeae38330ca173895d64ce522747585d5dbadb2fb19818d00d",
     "controls.mjs": "2a8a552e4c6b17afef86dcb0339184da160628cf749d0a46b1aee8b59d5bf842",
-    "game.mjs": "735c85ddfb3dcefd950f031df941d68bf48b06a4ddee2c250060ff15b96ff4f8"
+    "parallax.mjs": "862e4188c81ca9b95cac1c156988efe37570ce3e8a8caf56ffea2c9c85d32556",
+    "ghost-hands.mjs": "478e86bfdc4dc7659117169a33c29d4dc7545814a952c1e404af14e8748b66db",
+    "followers.mjs": "79c01a323e8710aa922e7e9bb3f30180898080ef7b96e4302f1fe1b862f9d054",
+    "game.mjs": "80500c5c48245227731457974ccfa2515a1df3d8b8942c0b5e91b25bb48b8ae2"
   }
 }

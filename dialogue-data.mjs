@@ -525,6 +525,78 @@ export const DIALOGUE_DATA = {
       "speaker": "katya",
       "trigger": "phone",
       "text": "Зараз звірю, що пишуть у чаті, з тим, що ми бачили самі. Потім вирішимо разом — у мене вже є пропозиція."
+    },
+    {
+      "id": "slavik.hands.1",
+      "speaker": "slavik",
+      "trigger": "hands",
+      "text": "Руки із землі. Треба перестрибнути."
+    },
+    {
+      "id": "slavik.hands.2",
+      "speaker": "slavik",
+      "trigger": "hands",
+      "text": "Перестрибуй. Близько не підходь."
+    },
+    {
+      "id": "slavik.hands-hit.1",
+      "speaker": "slavik",
+      "trigger": "hands-hit",
+      "text": "Вони мене відштовхнули."
+    },
+    {
+      "id": "slavik.hands-hit.2",
+      "speaker": "slavik",
+      "trigger": "hands-hit",
+      "text": "Сюди краще стрибком."
+    },
+    {
+      "id": "dasha.hands.1",
+      "speaker": "dasha",
+      "trigger": "hands",
+      "text": "Ой, зелені хапусі! Їх треба перестрибнути, поки не схопили!"
+    },
+    {
+      "id": "dasha.hands.2",
+      "speaker": "dasha",
+      "trigger": "hands",
+      "text": "До них ніжками не йдемо, через них стрибочком летимо!"
+    },
+    {
+      "id": "dasha.hands-hit.1",
+      "speaker": "dasha",
+      "trigger": "hands-hit",
+      "text": "Я не впала! Це вони землю підсунули!"
+    },
+    {
+      "id": "dasha.hands-hit.2",
+      "speaker": "dasha",
+      "trigger": "hands-hit",
+      "text": "Ну все, хапусі, тепер я через вас точно перестрибну!"
+    },
+    {
+      "id": "katya.hands.1",
+      "speaker": "katya",
+      "trigger": "hands",
+      "text": "Бачите ці руки? Підходимо обережно й перестрибуємо через них одним стрибком, тоді вони нас не дістануть."
+    },
+    {
+      "id": "katya.hands.2",
+      "speaker": "katya",
+      "trigger": "hands",
+      "text": "Через ці руки треба перестрибнути, тому не поспішайте й тримайтеся трохи далі, поки я виберу момент."
+    },
+    {
+      "id": "katya.hands-hit.1",
+      "speaker": "katya",
+      "trigger": "hands-hit",
+      "text": "Цього разу я трохи не розрахувала, але наступний стрибок буде вдалим, а ви поки близько не підходьте."
+    },
+    {
+      "id": "katya.hands-hit.2",
+      "speaker": "katya",
+      "trigger": "hands-hit",
+      "text": "Схоже, стрибати треба раніше; зараз я відійду, спробую ще раз і покажу вам, як тут пройти."
     }
   ],
   "conversations": [

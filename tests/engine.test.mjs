@@ -39,12 +39,12 @@ for(const id of Object.keys(CHARACTERS)){
   assert.equal(requestJump(stationary),true);
   const peak=finishJump(stationary);
   assert.equal(stationary.x,450);assert.equal(stationary.facing,-1);
-  assert.ok(peak>120&&peak<122);
+  assert.ok(peak>170&&peak<172);
   for(const direction of [-1,1]){
-    const forward=createState(id);assert.equal(requestJump(forward,direction),true);
+    const forward=createState(id);forward.x=800;assert.equal(requestJump(forward,direction),true);
     finishJump(forward);
     assert.equal(forward.facing,direction);
-    assert.ok((forward.x-450)*direction>170&&(forward.x-450)*direction<185);
+    assert.ok((forward.x-800)*direction>400&&(forward.x-800)*direction<412);
   }
 }
 assert.equal(JSON.stringify(CHARACTERS),originalScales);
@@ -55,7 +55,7 @@ finishJump(double);
 for(const [start,axis,boundary] of [[WORLD.minX+5,-1,WORLD.minX],[WORLD.maxX-5,1,WORLD.maxX]]){
   const wall=createState();wall.x=start;requestJump(wall,axis);finishJump(wall);assert.equal(wall.x,boundary);
 }
-const airControl=createState();requestJump(airControl);step(airControl,1,.05);assert.ok(airControl.x>450);assert.equal(airControl.jumpVelocity,WORLD.speed);finishJump(airControl);
+const airControl=createState();requestJump(airControl);step(airControl,1,.05);assert.ok(airControl.x>450);assert.equal(airControl.jumpVelocity,WORLD.airSpeed);finishJump(airControl);
 const reset=createState('katya');assert.equal(reset.y,0);assert.equal(reset.airborne,false);
 console.log('Passed: all three jump in place, jump left/right, retain momentum, land, keep size, reject double jumps, survive switching and stop at scene boundaries.');
 for(const id of Object.keys(CHARACTERS)){

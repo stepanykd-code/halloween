@@ -1,0 +1,112 @@
+{
+  "screenWidth": 1600,
+  "screenCount": 10,
+  "worldWidth": 16000,
+  "height": 900,
+  "groundY": 756,
+  "layers": [
+    {
+      "id": "far",
+      "image": "poltava-far",
+      "speed": 0.14,
+      "y": -110
+    },
+    {
+      "id": "middle",
+      "image": "poltava-middle",
+      "speed": 0.5,
+      "y": -40
+    },
+    {
+      "id": "ground",
+      "image": "poltava-ground",
+      "speed": 1,
+      "y": 0
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "glory",
+      "name": "Корпусний сад · Монумент Слави",
+      "worldX": 3000,
+      "source": [
+        0,
+        0,
+        728,
+        565
+      ],
+      "anchorY": 554,
+      "width": 760,
+      "baseline": 630
+    },
+    {
+      "id": "museum",
+      "name": "Краєзнавчий музей",
+      "worldX": 6500,
+      "source": [
+        728,
+        0,
+        944,
+        565
+      ],
+      "anchorY": 554,
+      "width": 980,
+      "baseline": 635
+    },
+    {
+      "id": "homestead",
+      "name": "Садиба Івана Котляревського",
+      "worldX": 10300,
+      "source": [
+        0,
+        565,
+        836,
+        376
+      ],
+      "anchorY": 342,
+      "width": 980,
+      "baseline": 635
+    },
+    {
+      "id": "arbor",
+      "name": "Біла альтанка",
+      "worldX": 14000,
+      "source": [
+        836,
+        565,
+        836,
+        376
+      ],
+      "anchorY": 364,
+      "width": 1040,
+      "baseline": 635
+    }
+  ],
+  "atlas": {
+    "width": 1672,
+    "height": 941
+  },
+  "cityGroundJoin": {
+    "minimumOpaqueOverlapWorld": 25,
+    "cityShiftY": -40
+  },
+  "generator": "built-in image_gen",
+  "offline": true,
+  "moon": {
+    "image": "poltava-moon.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "renderSize": 300,
+    "count": 1,
+    "cameraFactor": 0.018
+  },
+  "bats": {
+    "perLandmark": 7,
+    "flockCount": 4,
+    "total": 28,
+    "rendering": "animated Canvas silhouettes",
+    "reducedMotion": "static poses"
+  }
+}

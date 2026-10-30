@@ -1,13 +1,15 @@
 {
   "name": "slavik-and-friends",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Славік і друзі — Таємниці Полтави: офлайн-пригода з діалогами",
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "test": "node --check game.mjs && node --test tests/engine.test.mjs tests/fall.test.mjs tests/dialogue.test.mjs tests/controls.test.mjs tests/phone-rig.test.mjs && node scripts/validate-assets.mjs",
+    "test": "node --check game.mjs && node --test tests/engine.test.mjs tests/fall.test.mjs tests/dialogue.test.mjs tests/controls.test.mjs tests/phone-rig.test.mjs tests/parallax.test.mjs tests/ghost-hands.test.mjs tests/ghost-spawn.test.mjs tests/followers.test.mjs && node scripts/validate-assets.mjs",
     "build": "node scripts/build.mjs",
     "offline": "node scripts/build-offline.mjs"
   }
