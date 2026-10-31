@@ -1,4 +1,10 @@
 export const SLAVIK_ABILITY=Object.freeze({duration:4.4,shoulder:[164,178],hand:[152,311],circle:[350,190],scale:1});
+// The approved drawing poses are unchanged. Skip its long static hold and
+// play the existing fade/arm return during the last 600 ms of the game cast.
+export function abilityAnimationTime(time){
+ const t=Math.max(0,Math.min(2,time));
+ return t<=1.4?t:2.7+(t-1.4)/.6*1.7;
+}
 const abilitySmooth=t=>{t=Math.max(0,Math.min(1,t));return Math.max(0,Math.min(1,t*t*t*(t*(t*6-15)+10)));};
 export function slavikAbilityPose(time){
  const t=((time%4.4)+4.4)%4.4;

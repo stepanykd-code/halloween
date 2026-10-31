@@ -92,6 +92,8 @@
 #touch-controls .ability-button:enabled{opacity:1;cursor:pointer;background:#173849;color:#b6f2ff;border-color:#63bfd1;box-shadow:inset 0 0 12px #8bd8ef15}
 #touch-controls .ability-button:enabled.is-held{background:#285269;box-shadow:0 0 14px #8bd8ef35}
 .boss-status{position:absolute;z-index:2;top:12px;left:50%;transform:translateX(-50%);max-width:90%;padding:7px 13px;border:1px solid #efb57955;border-radius:18px;background:#241827b8;color:#ffe3b6;font-size:11px;font-weight:700;text-align:center;pointer-events:none}.boss-status[hidden]{display:none}@media(max-width:600px){.boss-status{top:7px;padding:5px 9px;font-size:9px}}
+.boss-tastes{position:absolute;z-index:2;top:46px;left:50%;transform:translateX(-50%);width:max-content;max-width:90%;padding:5px 11px;border-radius:15px;background:#241827a8;color:#ffe8bd;font-size:10px;font-weight:650;text-align:center;pointer-events:none}.boss-tastes[hidden]{display:none}@media(max-width:600px){.boss-tastes{top:35px;font-size:8px;padding:4px 8px}}
+.victory-banner{position:absolute;z-index:2;top:14px;right:12px;max-width:90%;padding:9px 18px;border:1px solid #d7ffc66b;border-radius:20px;background:#19332dcc;color:#edffcf;font-size:13px;font-weight:750;text-align:center;pointer-events:none}.victory-banner[hidden]{display:none}@media(max-width:600px){.victory-banner{font-size:10px;padding:6px 12px;top:8px}}
 
 #touch-controls .ability-button[data-hero=dasha]:enabled{background:#39254d;color:#ecd3ff;border-color:#b286d5}
 #touch-controls .ability-button[data-hero=katya]:enabled{background:#492b3f;color:#ffe0ba;border-color:#eab08a}

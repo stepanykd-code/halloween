@@ -21,11 +21,11 @@ export function createBossArenaParty(){
     }
     if(Object.values(players).every(p=>Math.abs(p.x-entryGoals[p.character])<1&&!p.airborne&&p.mode!=='fall'&&p.mode!=='ability'))entering=false;
   }
-  function update(players,controlled,view,seconds){
+  function update(players,controlled,view,seconds,{crouchFor=()=>false}={}){
     const dt=Math.max(0,Math.min(.05,seconds)),active=players[controlled];
     const others=Object.values(players).filter(p=>p.character!==controlled).sort((a,b)=>a.x-b.x);
     const spacing=BOSS_ARENA_PARTY.separation;
-    const slots=[.075,.22,.365,.51].map(f=>view.x+Math.min(1600,view.width)*f);
+    const slots=view.slots??[.075,.22,.365,.51].map(f=>view.x+Math.min(1600,view.width)*f);
     const available=slots.filter(x=>Math.abs(x-active.x)>=spacing);
     let best=null;
     for(let a=0;a<available.length;a++)for(let b=a+1;b<available.length;b++){
@@ -40,6 +40,7 @@ export function createBossArenaParty(){
       return da===db?(da>0?b.x-a.x:a.x-b.x):da-db;
     });
     for(const player of movers){
+      if(crouchFor(player)){step(player,0,dt,true);player.facing=1;continue;}
       if(player.airborne||player.mode==='fall'||player.mode==='ability'){step(player,0,dt);continue;}
       const distance=goals[player.character]-player.x,dir=Math.sign(distance);
       let allowed=Math.min(Math.abs(distance),BOSS_ARENA_PARTY.speed*dt);

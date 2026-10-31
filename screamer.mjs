@@ -45,5 +45,5 @@ export function createScreamerDirector(random=Math.random){
   const left=Math.min(view.x,...Object.values(players).map(p=>p.x))-650;
   ghosts=ghosts.filter(ghost=>ghost.x>left);
  }
- return {reset,observe,advance,get clears(){return clears;},get ghosts(){return ghosts;}};
+ return {reset,clearGhosts(){ghosts=[];flights.clear();},observe,advance,get clears(){return clears;},get ghosts(){return ghosts;}};
 }

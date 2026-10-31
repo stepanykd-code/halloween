@@ -1,9 +1,9 @@
 import {WORLD,requestHitFall} from './engine.mjs';
 import {POLTAVA_LANDMARKS} from './parallax.mjs';
 import {abilitySpell} from './spell-projectiles.mjs';
-import {pumpkinBossPose} from './pumpkin-boss-rig.mjs';
+import {pumpkinBossPose,PUMPKIN_BOSS_ANIMATIONS} from './pumpkin-boss-rig.mjs';
 
-export const PUMPKIN_ENCOUNTER=Object.freeze({x:POLTAVA_LANDMARKS[0].worldX+1100,left:-276,right:300,height:560,bodyRadius:34,inactiveAt:2.7,defeatDuration:4.8,cameraSeconds:1.2});
+export const PUMPKIN_ENCOUNTER=Object.freeze({x:POLTAVA_LANDMARKS[0].worldX+1100,left:-276,right:300,height:560,bodyRadius:34,inactiveAt:PUMPKIN_BOSS_ANIMATIONS.defeat.duration,defeatDuration:PUMPKIN_BOSS_ANIMATIONS.defeat.duration,cameraSeconds:1.2});
 export function createPumpkinSequence(random=Math.random){
   const heroes=['slavik','dasha','katya'],unit=()=>Math.max(0,Math.min(.999999999,random()));
   for(let i=heroes.length-1;i>0;i--){const j=Math.floor(unit()*(i+1));[heroes[i],heroes[j]]=[heroes[j],heroes[i]];}

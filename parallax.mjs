@@ -37,6 +37,16 @@ export function moonPlacement(cameraX,visibleWidth,cameraY=0){
   const center=Math.max(size/2+24,Math.min(visibleWidth-size/2-24,visibleWidth*.76-cameraX*.018));
   return {x:cameraX+center-size/2,y:Math.max(190,cameraY+154)-size/2,size};
 }
+export function rabbitMoonPlacement(cameraX,visibleWidth,cameraY=0){
+  const moon=moonPlacement(cameraX,visibleWidth,cameraY),scale=moon.size*.82/890;
+  const oldCenterX=moon.x+moon.size/2,centerX=cameraX+Math.max(180,Math.min(visibleWidth-180,visibleWidth*.36)),centerY=moon.y+moon.size/2;
+  const shiftY=Math.max(0,cameraY+12-(centerY-880*scale));
+  return {x:centerX-570*scale,y:centerY+shiftY-880*scale,width:1141*scale,height:1379*scale,shiftY,shiftX:centerX-oldCenterX,bodyDiameter:890*scale};
+}
+export function moonEndingPose(seconds=-1){
+  const ease=(a,b,t)=>{const n=Math.max(0,Math.min(1,(t-a)/(b-a)));return n*n*(3-2*n);};
+  return {move:ease(0,.8,seconds),drift:ease(0,2.6,seconds),rabbit:ease(.8,3.2,seconds),bats:1-ease(0,3,seconds)};
+}
 export function landmarkBatPose(landmark,index,time,cameraX,cameraY=0,reducedMotion=false){
   const t=reducedMotion?0:time;
   const [slotX,slotY,speed,offset]=BAT_ROUTES[index];
@@ -81,14 +91,17 @@ export function createPoltavaBackground(images){
     c.globalCompositeOperation='destination-in';c.fillStyle=fade;c.fillRect(0,0,texture.width,texture.height);
     return {layer,texture,width:texture.width*900/texture.height};
   });
-  return {draw(context,cameraX,visibleWidth,{time=0,cameraY=0,reducedMotion=false}={}){
+  return {draw(context,cameraX,visibleWidth,{time=0,cameraY=0,reducedMotion=false,endingTime=-1}={}){
     const visibleFlocks=[];
+    const ending=moonEndingPose(endingTime);
     context.fillStyle='#111b48';context.fillRect(cameraX,0,visibleWidth,900);
     for(const {layer,texture,width} of textures){
       for(const x of parallaxTiles(cameraX,visibleWidth,width,layer.speed))context.drawImage(texture,x,layer.y,width,900);
       if(layer.id==='far'){
         const moon=moonPlacement(cameraX,visibleWidth,cameraY);
-        context.drawImage(images['poltava-moon'],moon.x,moon.y,moon.size,moon.size);
+        const rabbit=rabbitMoonPlacement(cameraX,visibleWidth,cameraY),shift=rabbit.shiftY*ending.move,drift=rabbit.shiftX*ending.drift;
+        context.save();context.globalAlpha=1-ending.rabbit;context.drawImage(images['poltava-moon'],moon.x+drift,moon.y+shift,moon.size,moon.size);context.restore();
+        if(ending.rabbit>0&&images['poltava-moon-rabbit']){context.save();context.globalAlpha=ending.rabbit;context.drawImage(images['poltava-moon-rabbit'],rabbit.x-rabbit.shiftX+drift,rabbit.y-rabbit.shiftY+shift,rabbit.width,rabbit.height);context.restore();}
       }
       if(layer.id==='middle'){
         for(const landmark of POLTAVA_LANDMARKS){
@@ -97,8 +110,8 @@ export function createPoltavaBackground(images){
           const [x,y,w,h]=destination,screenX=x-cameraX*.5;
           if(screenX+w<0||screenX>visibleWidth)continue;
           context.drawImage(atlas,...source,x+cameraX*.5,y,w,h);
-          visibleFlocks.push(landmark.id);
-          for(let i=0;i<BATS_PER_LANDMARK;i++)drawFlyingBat(context,landmarkBatPose(landmark,i,time,cameraX,cameraY,reducedMotion));
+          if(ending.bats>.01){visibleFlocks.push(landmark.id);context.save();context.globalAlpha=ending.bats;
+          for(let i=0;i<BATS_PER_LANDMARK;i++){const pose=landmarkBatPose(landmark,i,time,cameraX,cameraY,reducedMotion);if(endingTime>=0){pose.x+=(i%2?1:-1)*endingTime*endingTime*55;pose.y-=endingTime*endingTime*35;}drawFlyingBat(context,pose);}context.restore();}
         }
       }
     }

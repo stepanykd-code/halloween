@@ -30,6 +30,7 @@ export function spellOrigin(player){
 // The flight and all particles are functions of age, independent of frame rate.
 // Text is never mirrored: only the flight direction and its trail change sides.
 export function spellProjectilePose(projectile){
+  if(projectile.reflected)return {x:projectile.x,y:projectile.y,rotation:.06*Math.sin(projectile.age*9),pulse:1+.025*Math.sin(projectile.age*11),appearance:1};
   const {spell,age:t,direction,origin}=projectile;
   const distance=spell.speed*t;
   let along=distance,y=0,rotation=0,pulse=1;
@@ -59,7 +60,8 @@ export function createSpellProjectiles(){
       const spell=abilitySpell(player.character,player.abilitySlot);
       if(player.mode!=='ability'||!spell||!player.abilitySerial||player.abilityTime<spell.launchMs||launched.get(player.character)===player.abilitySerial)continue;
       launched.set(player.character,player.abilitySerial);
-      projectiles.push({id:++serial,character:player.character,spell,direction:player.facing,origin:spellOrigin(player),age:Math.max(0,(player.abilityTime-spell.launchMs)/1000),width:spell.width*CHARACTERS[player.character].scale});
+      player.abilityReleasedSerial=player.abilitySerial;
+      projectiles.push({id:++serial,character:player.character,castSerial:player.abilitySerial,spell,direction:player.facing,origin:spellOrigin(player),age:Math.max(0,(player.abilityTime-spell.launchMs)/1000),width:spell.width*CHARACTERS[player.character].scale});
     }
   }
   function advance(seconds,view,onContact=()=>false){
@@ -144,13 +146,14 @@ export function createSpellProjectileRenderer(images){
     }
   },drawImpacts(context,impacts){
     for(const impact of impacts){
-      const t=Math.min(1,impact.age/impact.duration),correct=impact.result==='correct',ease=spellSmooth(t);
+      const t=Math.min(1,impact.age/impact.duration),absorbed=impact.result==='absorbed',correct=impact.result==='correct'||absorbed,ease=spellSmooth(t);
+      const impactX=absorbed?impact.x+(impact.target.x-impact.x)*ease:impact.x,impactY=absorbed?impact.y+(impact.target.y-impact.y)*ease:impact.y;
       const offset=correct?0:-impact.direction*100*ease,y=correct?0:-35*Math.sin(t*Math.PI);
       c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,layer.width,layer.height);c.setTransform(1.5,0,0,1.5,480,300);
       c.save();c.translate(offset,y);c.rotate(correct?.08*Math.sin(t*8):impact.direction*t*.35);
       const scale=correct?(1+.16*Math.sin(Math.PI*Math.min(1,t*3)))*(1-ease*.9):1-.25*ease;
       c.scale(scale,scale);c.drawImage(images['spell-'+impact.spell.id],-impact.width/2,-impact.width/3,impact.width,impact.width*2/3);c.restore();
-      c.strokeStyle=correct?'#b0ffbf':'#ff8495';c.fillStyle=correct?impact.spell.accent:'#ff8495';c.shadowColor=c.strokeStyle;c.shadowBlur=12;c.lineWidth=3;
+      c.strokeStyle=absorbed?'#ffe1a2':correct?'#b0ffbf':'#ff8495';c.fillStyle=correct?impact.spell.accent:'#ff8495';c.shadowColor=c.strokeStyle;c.shadowBlur=12;c.lineWidth=3;
       if(correct){
         for(let i=0;i<3;i++){const r=20+t*100+i*12;c.globalAlpha=(1-t)*(.8-i*.15);c.beginPath();c.ellipse(0,0,r*.45,r,0,t*3+i,t*3+i+Math.PI*1.6);c.stroke();}
         c.globalAlpha=1;for(let i=0;i<8;i++){const a=i*Math.PI/4+t*2,r=24+t*100;c.beginPath();c.moveTo(Math.cos(a)*r,Math.sin(a)*r);c.lineTo(Math.cos(a)*(r+12),Math.sin(a)*(r+12));c.stroke();}
@@ -159,7 +162,7 @@ export function createSpellProjectileRenderer(images){
         for(let i=0;i<7;i++){const a=i*spellTAU/7,r=20+t*85;c.beginPath();c.moveTo(Math.cos(a)*r,Math.sin(a)*r);c.lineTo(Math.cos(a)*(r+10),Math.sin(a)*(r+10));c.stroke();}
       }
       c.globalAlpha=1;c.shadowBlur=0;
-      context.save();context.globalAlpha=SPELL_OPACITY*(1-ease);context.drawImage(layer,impact.x-320,impact.y-200,640,400);context.restore();
+      context.save();context.globalAlpha=SPELL_OPACITY*(1-ease);context.drawImage(layer,impactX-320,impactY-200,640,400);context.restore();
     }
   }};
 }
