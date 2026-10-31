@@ -1,10 +1,11 @@
 {
-  "version": "0.3.0",
-  "files": 74,
-  "images": 25,
+  "version": "0.4.0",
+  "files": 97,
+  "images": 33,
   "archiveCreated": false,
   "content": {
-    "conversationCount": 17,
+    "conversationCount": 20,
+    "lineCount": 269,
     "phoneLinesPerCharacter": 12,
     "locale": "uk-UA",
     "city": "Полтава",
@@ -14,19 +15,37 @@
       0.14,
       0.5,
       1
-    ]
+    ],
+    "abilitiesPerHero": 2,
+    "dashaRefusalChance": 0.25,
+    "boss": {
+      "name": "Гарбузич",
+      "worldX": 4100,
+      "comboLength": 3,
+      "cameraTransitionSeconds": 1.2,
+      "automaticArenaEntry": true
+    }
   },
   "sourceHashes": {
-    "index.html": "347811d4e6adcfcad5443d1d15a6049e459e211bc2941796750f4b770e40b79b",
-    "style.css": "12a9f35a8f6aa994891d9297479945704666a2a6830787383041dcec261d2c09",
-    "dialogue-data.mjs": "7a1b8914bf0fdf34585dc3080bb87a3ef14f9b67651ad062ba98f8469fedfb7a",
-    "dialogue.mjs": "6a5acd653a4ebdbf79d324569752a45f1272375806e2f1df51e2b903adee3c8d",
-    "engine.mjs": "4eec4a559cf827440302160a6d2454507c6f1d9ad12b4527bb958c2d30deb05a",
+    "index.html": "6577fd34cc5589d75d87f0074ebba80cc562a55d3e9cae95bfca1675277f8bb5",
+    "style.css": "711894efda31c99c2a4d630f16bc96f800676918f71f004989fd8387e8c3f780",
+    "dialogue-data.mjs": "518656a44e8a6577b4b625fed5232e77e0b82c86212c6b3ab87d0b3098592c2b",
+    "dialogue.mjs": "913056a6a858aa09ea26405047e00ba2d04514cdf78888226b4c80e6e6e86a1b",
+    "engine.mjs": "4353035765fa439465df0cd53d3e44a34f66bb6f0b99f6c09257f8490388e9aa",
     "phone-rig.mjs": "b1ec851ac2df2eaeae38330ca173895d64ce522747585d5dbadb2fb19818d00d",
-    "controls.mjs": "2a8a552e4c6b17afef86dcb0339184da160628cf749d0a46b1aee8b59d5bf842",
+    "controls.mjs": "573b31a0ba8360afb72a6677cb5ed88e450cbf26baf364860fb951764612153f",
     "parallax.mjs": "862e4188c81ca9b95cac1c156988efe37570ce3e8a8caf56ffea2c9c85d32556",
     "ghost-hands.mjs": "478e86bfdc4dc7659117169a33c29d4dc7545814a952c1e404af14e8748b66db",
     "followers.mjs": "79c01a323e8710aa922e7e9bb3f30180898080ef7b96e4302f1fe1b862f9d054",
-    "game.mjs": "80500c5c48245227731457974ccfa2515a1df3d8b8942c0b5e91b25bb48b8ae2"
+    "screamer-rig.mjs": "a0250917b45965f79170c59b7eeb68f3bd8c0cd0cfdf85272eea4ef8424786dd",
+    "screamer.mjs": "42a572c81b08e95812100d6714af124f0d2baa1eaf3bf330a32cdc00c71ca45c",
+    "slavik-ability.mjs": "b3daa35359b97d4480c562e5dac5dc76f2cca5c39cdc21f37318b0275e5db5b0",
+    "girls-ability.mjs": "89abb0d468a42e6dd92e7a3802dc0c709242b315b303a0691412d9dc24ca8e2c",
+    "spell-projectiles.mjs": "0a29275ec10255f7999df939157fc8242363f0566c1de2e79a57ea7d96a7d570",
+    "pumpkin-boss-rig.mjs": "990b4858cec373b417117d67ca5632ae6848fece84ae57aea4caa18af2f54c16",
+    "pumpkin-boss.mjs": "9701d62960680433e5d62010b4f15ecde3388ebe247bd3aa21f1e6997cfe712d",
+    "pumpkin-dialogue.mjs": "21b5e8588ac3831fa8a381ef90ff9290fdd4eb3e877362fa1e7dc3f515b42386",
+    "boss-arena-party.mjs": "cf6a1ad858c4f8b0f4a3337c3626d2250ddff1407af761476e44bc2f26e2c11d",
+    "game.mjs": "cf6116d61062cb31e89673557f364c1da845c0a5e85d77ec81aa7fbb06393f2a"
   }
 }

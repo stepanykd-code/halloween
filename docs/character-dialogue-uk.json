@@ -36,9 +36,209 @@
       ],
       "color": "#b89afa",
       "voiceNotes": "Говірка, цілеспрямована, наполеглива. Любить керувати й досягати свого; говорить розгорнуто, уміє переконувати та подавати свій задум як спільну вигоду. Звичайні знання про світ."
+    },
+    "pumpkin": {
+      "name": "Гарбузич",
+      "nickname": "Гарбузич",
+      "aliases": [],
+      "color": "#efa562",
+      "role": "boss",
+      "voiceNotes": "Злий, пихатий, чванькуватий сторож біля Монумента Слави. Постійно повторює, що нікого не пропустить. Правильні заклинання лякають його, але він приховує страх вихвалянням."
     }
   },
   "lines": [
+    {
+      "id": "slavik.ability-e.1",
+      "speaker": "slavik",
+      "trigger": "ability-e",
+      "text": "Потрібна сила."
+    },
+    {
+      "id": "slavik.ability-e.2",
+      "speaker": "slavik",
+      "trigger": "ability-e",
+      "text": "Розрахунок точний."
+    },
+    {
+      "id": "slavik.ability-e.3",
+      "speaker": "slavik",
+      "trigger": "ability-e",
+      "text": "Прикладаю силу."
+    },
+    {
+      "id": "slavik.ability-e.4",
+      "speaker": "slavik",
+      "trigger": "ability-e",
+      "text": "Перешкоду усуну."
+    },
+    {
+      "id": "slavik.ability-r.1",
+      "speaker": "slavik",
+      "trigger": "ability-r",
+      "text": "Спокійно."
+    },
+    {
+      "id": "slavik.ability-r.2",
+      "speaker": "slavik",
+      "trigger": "ability-r",
+      "text": "Без зайвого шуму."
+    },
+    {
+      "id": "slavik.ability-r.3",
+      "speaker": "slavik",
+      "trigger": "ability-r",
+      "text": "Зберігаю рівновагу."
+    },
+    {
+      "id": "slavik.ability-r.4",
+      "speaker": "slavik",
+      "trigger": "ability-r",
+      "text": "Паніка не допоможе."
+    },
+    {
+      "id": "dasha.ability-e.1",
+      "speaker": "dasha",
+      "trigger": "ability-e",
+      "text": "Ой, як страшно. Аж пофіг!"
+    },
+    {
+      "id": "dasha.ability-e.2",
+      "speaker": "dasha",
+      "trigger": "ability-e",
+      "text": "Твої страшилки? Мені пофігусики!"
+    },
+    {
+      "id": "dasha.ability-e.3",
+      "speaker": "dasha",
+      "trigger": "ability-e",
+      "text": "Вмикаю режим: мені пофіг!"
+    },
+    {
+      "id": "dasha.ability-e.4",
+      "speaker": "dasha",
+      "trigger": "ability-e",
+      "text": "Налякав? Молодець. Мені пофіг!"
+    },
+    {
+      "id": "dasha.ability-r.1",
+      "speaker": "dasha",
+      "trigger": "ability-r",
+      "text": "Ха-ть-фу! Лови привітик!"
+    },
+    {
+      "id": "dasha.ability-r.2",
+      "speaker": "dasha",
+      "trigger": "ability-r",
+      "text": "Ой, заклинання випадково чхнуло!"
+    },
+    {
+      "id": "dasha.ability-r.3",
+      "speaker": "dasha",
+      "trigger": "ability-r",
+      "text": "Подаруночок! Можеш не дякувати!"
+    },
+    {
+      "id": "dasha.ability-r.4",
+      "speaker": "dasha",
+      "trigger": "ability-r",
+      "text": "Не ображайся, це я люблячи!"
+    },
+    {
+      "id": "katya.ability-e.1",
+      "speaker": "katya",
+      "trigger": "ability-e",
+      "text": "Пазурі назовні — дорогу пантері!"
+    },
+    {
+      "id": "katya.ability-e.2",
+      "speaker": "katya",
+      "trigger": "ability-e",
+      "text": "Відійдіть, зараз я все владнаю!"
+    },
+    {
+      "id": "katya.ability-e.3",
+      "speaker": "katya",
+      "trigger": "ability-e",
+      "text": "Я ж казала: зі мною краще не сперечатися!"
+    },
+    {
+      "id": "katya.ability-e.4",
+      "speaker": "katya",
+      "trigger": "ability-e",
+      "text": "Мій план простий: прибираємо перешкоду!"
+    },
+    {
+      "id": "katya.ability-r.1",
+      "speaker": "katya",
+      "trigger": "ability-r",
+      "text": "Зуби пантери! Питання ще є?"
+    },
+    {
+      "id": "katya.ability-r.2",
+      "speaker": "katya",
+      "trigger": "ability-r",
+      "text": "Попереджала ж: я свого досягну!"
+    },
+    {
+      "id": "katya.ability-r.3",
+      "speaker": "katya",
+      "trigger": "ability-r",
+      "text": "Відступай, поки я по-доброму прошу!"
+    },
+    {
+      "id": "katya.ability-r.4",
+      "speaker": "katya",
+      "trigger": "ability-r",
+      "text": "Пантера сказала — значить, так і буде!"
+    },
+    {
+      "id": "dasha.ability-refused.1",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "А не хочу. Несподівано, правда?"
+    },
+    {
+      "id": "dasha.ability-refused.2",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Кнопка є, а мого бажання нема!"
+    },
+    {
+      "id": "dasha.ability-refused.3",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Пофіг. Навіть на заклинання!"
+    },
+    {
+      "id": "dasha.ability-refused.4",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Я поки просто постою красива!"
+    },
+    {
+      "id": "dasha.ability-refused.5",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Магія на перерві. Я так вирішила!"
+    },
+    {
+      "id": "dasha.ability-refused.6",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Ха-ть… ні, передумала!"
+    },
+    {
+      "id": "dasha.ability-refused.7",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "Ну попроси ще. Може, подумаю!"
+    },
+    {
+      "id": "dasha.ability-refused.8",
+      "speaker": "dasha",
+      "trigger": "ability-refused",
+      "text": "А чарівне слово? І це не «Пофіг»!"
+    },
     {
       "id": "slavik.idle.1",
       "speaker": "slavik",
@@ -596,6 +796,444 @@
       "speaker": "katya",
       "trigger": "hands-hit",
       "text": "Схоже, стрибати треба раніше; зараз я відійду, спробую ще раз і покажу вам, як тут пройти."
+    },
+    {
+      "id": "slavik.screamer.1",
+      "speaker": "slavik",
+      "trigger": "screamer",
+      "text": "Схоже на привида."
+    },
+    {
+      "id": "slavik.screamer.2",
+      "speaker": "slavik",
+      "trigger": "screamer",
+      "text": "Він летить ліворуч."
+    },
+    {
+      "id": "slavik.screamer.3",
+      "speaker": "slavik",
+      "trigger": "screamer",
+      "text": "Я його бачу. Ледь-ледь."
+    },
+    {
+      "id": "slavik.screamer.4",
+      "speaker": "slavik",
+      "trigger": "screamer",
+      "text": "Пояснення поки немає."
+    },
+    {
+      "id": "slavik.screamer.5",
+      "speaker": "slavik",
+      "trigger": "screamer",
+      "text": "Не торкайся. Поспостерігаємо здалеку."
+    },
+    {
+      "id": "dasha.screamer.1",
+      "speaker": "dasha",
+      "trigger": "screamer",
+      "text": "Ой, привидулька! Чому вона летить просто на нас?!"
+    },
+    {
+      "id": "dasha.screamer.2",
+      "speaker": "dasha",
+      "trigger": "screamer",
+      "text": "Я не злякалася! Це в мене обличчя так розминається."
+    },
+    {
+      "id": "dasha.screamer.3",
+      "speaker": "dasha",
+      "trigger": "screamer",
+      "text": "Славіку, ти ж у нас розумненький! Поговори з цією туманякою."
+    },
+    {
+      "id": "dasha.screamer.4",
+      "speaker": "dasha",
+      "trigger": "screamer",
+      "text": "Він майже прозорий. Може, зробимо вигляд, що нас теж не видно?"
+    },
+    {
+      "id": "dasha.screamer.5",
+      "speaker": "dasha",
+      "trigger": "screamer",
+      "text": "Привиде, а ти домашку лякати вмієш? У мене є для тебе робота!"
+    },
+    {
+      "id": "katya.screamer.1",
+      "speaker": "katya",
+      "trigger": "screamer",
+      "text": "Усі дивимося праворуч: привид летить звідти, тож цього разу він нас зненацька не застане."
+    },
+    {
+      "id": "katya.screamer.2",
+      "speaker": "katya",
+      "trigger": "screamer",
+      "text": "Так, справжній він чи ні — з’ясуємо потім, а зараз тримаємося разом і не даємо йому нас розігнати."
+    },
+    {
+      "id": "katya.screamer.3",
+      "speaker": "katya",
+      "trigger": "screamer",
+      "text": "Я пропоную простий план: спочатку стежимо, як він рухається, а тоді вже вирішуємо, що з ним робити."
+    },
+    {
+      "id": "katya.screamer.4",
+      "speaker": "katya",
+      "trigger": "screamer",
+      "text": "Якщо кожен побіжить куди заманеться, ми тільки загубимо одне одного, тому слухайте мене й тримайтеся поруч."
+    },
+    {
+      "id": "katya.screamer.5",
+      "speaker": "katya",
+      "trigger": "screamer",
+      "text": "Я, звісно, можу піти першою, але ви ж не залишите свого лідера сам на сам із привидом, правда?"
+    },
+    {
+      "id": "pumpkin.boss-taunt.1",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Я — Гарбузич! Тут моє слово головне. Далі не пройдете!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.2",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Ані кроку! Таких дрібних героїв я не пропускаю!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.3",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Корпусний сад під моєю владою. Вам сюди зась!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.4",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Стійте! Перед Гарбузичем усі повертають назад!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.5",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Ні прохання, ні ваші хитрощі не відкриють вам дороги!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.6",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Милуйтеся здалеку! Проходу для вас немає!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.7",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Я тут найвеличніший! А ви нікуди не підете!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.8",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Навіть не сподівайтеся. Гарбузич дороги не поступиться!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.9",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Повторюю для нетямущих: далі — ані кроку!"
+    },
+    {
+      "id": "pumpkin.boss-taunt.10",
+      "speaker": "pumpkin",
+      "trigger": "boss-taunt",
+      "text": "Моя могутність безмежна! А ваша прогулянка закінчилася!"
+    },
+    {
+      "id": "pumpkin.boss-correct.1",
+      "speaker": "pumpkin",
+      "trigger": "boss-correct",
+      "text": "Що?! Це випадковість! Я все одно вас не пропущу!"
+    },
+    {
+      "id": "pumpkin.boss-correct.2",
+      "speaker": "pumpkin",
+      "trigger": "boss-correct",
+      "text": "Я не боюся! Чуєте? Не боюся! І не пущу!"
+    },
+    {
+      "id": "pumpkin.boss-correct.3",
+      "speaker": "pumpkin",
+      "trigger": "boss-correct",
+      "text": "Не смійте так чаклувати! Проходу все одно не буде!"
+    },
+    {
+      "id": "pumpkin.boss-correct.4",
+      "speaker": "pumpkin",
+      "trigger": "boss-correct",
+      "text": "Моє світло… Ні! Перед Гарбузичем ви не пройдете!"
+    },
+    {
+      "id": "pumpkin.boss-wrong.1",
+      "speaker": "pumpkin",
+      "trigger": "boss-wrong",
+      "text": "Не те! Усе спочатку, невдахи! Дороги вам немає!"
+    },
+    {
+      "id": "pumpkin.boss-wrong.2",
+      "speaker": "pumpkin",
+      "trigger": "boss-wrong",
+      "text": "Ха! Порядок неправильний! Залишаєтеся тут!"
+    },
+    {
+      "id": "pumpkin.boss-wrong.3",
+      "speaker": "pumpkin",
+      "trigger": "boss-wrong",
+      "text": "Ваші чари мені не указ! Серія зіпсована. Не пущу!"
+    },
+    {
+      "id": "pumpkin.boss-wrong.4",
+      "speaker": "pumpkin",
+      "trigger": "boss-wrong",
+      "text": "Жалюгідна спроба! Я знову найвеличніший. Ані кроку!"
+    },
+    {
+      "id": "pumpkin.boss-contact.1",
+      "speaker": "pumpkin",
+      "trigger": "boss-contact",
+      "text": "Назад! Я ж сказав: не пройдете!"
+    },
+    {
+      "id": "pumpkin.boss-contact.2",
+      "speaker": "pumpkin",
+      "trigger": "boss-contact",
+      "text": "Близько не підходити! Дорога закрита!"
+    },
+    {
+      "id": "pumpkin.boss-contact.3",
+      "speaker": "pumpkin",
+      "trigger": "boss-contact",
+      "text": "Ви впали, а Гарбузич стоїть! Проходу немає!"
+    },
+    {
+      "id": "pumpkin.boss-defeating.1",
+      "speaker": "pumpkin",
+      "trigger": "boss-defeating",
+      "text": "Ні… Я ж… не пропускаю…"
+    },
+    {
+      "id": "slavik.boss-correct.1",
+      "speaker": "slavik",
+      "trigger": "boss-correct",
+      "text": "Він злякався. Порядок правильний."
+    },
+    {
+      "id": "slavik.boss-correct.2",
+      "speaker": "slavik",
+      "trigger": "boss-correct",
+      "text": "Цей крок працює. Запам’ятаймо."
+    },
+    {
+      "id": "slavik.boss-wrong.1",
+      "speaker": "slavik",
+      "trigger": "boss-wrong",
+      "text": "Помилка. Потрібно почати серію спочатку."
+    },
+    {
+      "id": "slavik.boss-wrong.2",
+      "speaker": "slavik",
+      "trigger": "boss-wrong",
+      "text": "Не те заклинання або не той порядок."
+    },
+    {
+      "id": "slavik.boss-contact.1",
+      "speaker": "slavik",
+      "trigger": "boss-contact",
+      "text": "Силою пройти не вийде. Потрібні заклинання."
+    },
+    {
+      "id": "slavik.boss-contact.2",
+      "speaker": "slavik",
+      "trigger": "boss-contact",
+      "text": "Спочатку вимкнемо його. Потім пройдемо."
+    },
+    {
+      "id": "dasha.boss-correct.1",
+      "speaker": "dasha",
+      "trigger": "boss-correct",
+      "text": "Опа! Ваше гарбузейшество затрусилося!"
+    },
+    {
+      "id": "dasha.boss-correct.2",
+      "speaker": "dasha",
+      "trigger": "boss-correct",
+      "text": "Ага! Оце йому зовсім не пофіг!"
+    },
+    {
+      "id": "dasha.boss-wrong.1",
+      "speaker": "dasha",
+      "trigger": "boss-wrong",
+      "text": "Я так і планувала! Ну… майже. Давайте спочатку!"
+    },
+    {
+      "id": "dasha.boss-wrong.2",
+      "speaker": "dasha",
+      "trigger": "boss-wrong",
+      "text": "Знову величається. Значить, не той варіант!"
+    },
+    {
+      "id": "dasha.boss-contact.1",
+      "speaker": "dasha",
+      "trigger": "boss-contact",
+      "text": "Ну й невихований овоч! Ми ще пройдемо!"
+    },
+    {
+      "id": "dasha.boss-contact.2",
+      "speaker": "dasha",
+      "trigger": "boss-contact",
+      "text": "А можна падати не так переконливо? Спершу чари!"
+    },
+    {
+      "id": "katya.boss-correct.1",
+      "speaker": "katya",
+      "trigger": "boss-correct",
+      "text": "Є! Цей крок запам’ятали. Тепер наступний!"
+    },
+    {
+      "id": "katya.boss-correct.2",
+      "speaker": "katya",
+      "trigger": "boss-correct",
+      "text": "Він боїться! Тримаємо правильний порядок!"
+    },
+    {
+      "id": "katya.boss-wrong.1",
+      "speaker": "katya",
+      "trigger": "boss-wrong",
+      "text": "Серія зірвалася. Міняємо варіант і починаємо спочатку!"
+    },
+    {
+      "id": "katya.boss-wrong.2",
+      "speaker": "katya",
+      "trigger": "boss-wrong",
+      "text": "Це була перевірка. Тепер знаємо, що так не працює."
+    },
+    {
+      "id": "katya.boss-contact.1",
+      "speaker": "katya",
+      "trigger": "boss-contact",
+      "text": "Не штовхайтеся до нього. Спочатку гасимо світло!"
+    },
+    {
+      "id": "katya.boss-contact.2",
+      "speaker": "katya",
+      "trigger": "boss-contact",
+      "text": "Він перегородив дорогу, але ми свого досягнемо!"
+    },
+    {
+      "id": "slavik.boss-next-slavik-e.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-slavik-e",
+      "text": "Зараз потрібне моє заклинання «Сила»."
+    },
+    {
+      "id": "slavik.boss-next-slavik-r.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-slavik-r",
+      "text": "Зараз потрібне моє заклинання «Спокій»."
+    },
+    {
+      "id": "slavik.boss-next-dasha-e.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-dasha-e",
+      "text": "Зараз Даша має використати «Пофіг»."
+    },
+    {
+      "id": "slavik.boss-next-dasha-r.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-dasha-r",
+      "text": "Зараз Даша має використати «Ха-ть-фу»."
+    },
+    {
+      "id": "slavik.boss-next-katya-e.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-katya-e",
+      "text": "Зараз Катя має використати «Пазурі»."
+    },
+    {
+      "id": "slavik.boss-next-katya-r.1",
+      "speaker": "slavik",
+      "trigger": "boss-next-katya-r",
+      "text": "Зараз Катя має використати «Зуби»."
+    },
+    {
+      "id": "dasha.boss-next-slavik-e.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-slavik-e",
+      "text": "Славіку, давай «Сила»! Гарбузейшество аж тремтить!"
+    },
+    {
+      "id": "dasha.boss-next-slavik-r.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-slavik-r",
+      "text": "Славіку, давай «Спокій»! Гарбузейшество аж тремтить!"
+    },
+    {
+      "id": "dasha.boss-next-dasha-e.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-dasha-e",
+      "text": "Моя черга? Ну тримай «Пофіг», гарбузова величносте!"
+    },
+    {
+      "id": "dasha.boss-next-dasha-r.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-dasha-r",
+      "text": "Моя черга? Ну тримай «Ха-ть-фу», гарбузова величносте!"
+    },
+    {
+      "id": "dasha.boss-next-katya-e.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-katya-e",
+      "text": "Катю, давай «Пазурі»! Гарбузейшество аж тремтить!"
+    },
+    {
+      "id": "dasha.boss-next-katya-r.1",
+      "speaker": "dasha",
+      "trigger": "boss-next-katya-r",
+      "text": "Катю, давай «Зуби»! Гарбузейшество аж тремтить!"
+    },
+    {
+      "id": "katya.boss-next-slavik-e.1",
+      "speaker": "katya",
+      "trigger": "boss-next-slavik-e",
+      "text": "Тепер Славік застосовує «Сила», а ми тримаємо порядок!"
+    },
+    {
+      "id": "katya.boss-next-slavik-r.1",
+      "speaker": "katya",
+      "trigger": "boss-next-slavik-r",
+      "text": "Тепер Славік застосовує «Спокій», а ми тримаємо порядок!"
+    },
+    {
+      "id": "katya.boss-next-dasha-e.1",
+      "speaker": "katya",
+      "trigger": "boss-next-dasha-e",
+      "text": "Тепер Даша застосовує «Пофіг», а ми тримаємо порядок!"
+    },
+    {
+      "id": "katya.boss-next-dasha-r.1",
+      "speaker": "katya",
+      "trigger": "boss-next-dasha-r",
+      "text": "Тепер Даша застосовує «Ха-ть-фу», а ми тримаємо порядок!"
+    },
+    {
+      "id": "katya.boss-next-katya-e.1",
+      "speaker": "katya",
+      "trigger": "boss-next-katya-e",
+      "text": "Тепер моя черга: «Пазурі». Дайте мені місце!"
+    },
+    {
+      "id": "katya.boss-next-katya-r.1",
+      "speaker": "katya",
+      "trigger": "boss-next-katya-r",
+      "text": "Тепер моя черга: «Зуби». Дайте мені місце!"
     }
   ],
   "conversations": [
@@ -999,6 +1637,84 @@
           "id": "dialogue.science.4",
           "speaker": "katya",
           "text": "Тоді лишаємо очі відкритими й ідемо разом. Мій план працює навіть без заплющування."
+        }
+      ]
+    },
+    {
+      "id": "boss-intro",
+      "trigger": "boss-intro",
+      "turns": [
+        {
+          "id": "dialogue.boss-intro.1",
+          "speaker": "pumpkin",
+          "text": "Я — Гарбузич, володар цієї дороги! Біля Монумента Слави ваш шлях закінчується! Далі не пущу!"
+        },
+        {
+          "id": "dialogue.boss-intro.2",
+          "speaker": "slavik",
+          "text": "Потрібні три правильні влучання поспіль. По одному від кожного."
+        },
+        {
+          "id": "dialogue.boss-intro.3",
+          "speaker": "dasha",
+          "text": "Ваше гарбузейшество, а якщо ми дуже миленько попросимо?"
+        },
+        {
+          "id": "dialogue.boss-intro.4",
+          "speaker": "pumpkin",
+          "text": "Не підлещуйся! Ані кроку! Я тут наймогутніший!"
+        },
+        {
+          "id": "dialogue.boss-intro.5",
+          "speaker": "katya",
+          "text": "Ми все одно пройдемо. Запам’ятовуємо порядок; помилилися — починаємо спочатку."
+        }
+      ]
+    },
+    {
+      "id": "boss-strategy",
+      "trigger": "boss-strategy",
+      "turns": [
+        {
+          "id": "dialogue.boss-strategy.1",
+          "speaker": "slavik",
+          "text": "Потрібні три правильні влучання поспіль. По одному від кожного."
+        },
+        {
+          "id": "dialogue.boss-strategy.2",
+          "speaker": "dasha",
+          "text": "Тобто три мої «Ха-ть-фу» не підійдуть? Який вибагливий овоч!"
+        },
+        {
+          "id": "dialogue.boss-strategy.3",
+          "speaker": "katya",
+          "text": "Змінюємо героїв і запам’ятовуємо порядок. Помилкове влучання — починаємо спочатку."
+        },
+        {
+          "id": "dialogue.boss-strategy.4",
+          "speaker": "slavik",
+          "text": "Коли його світло згасне, можна пройти."
+        }
+      ]
+    },
+    {
+      "id": "boss-victory",
+      "trigger": "boss-victory",
+      "turns": [
+        {
+          "id": "dialogue.boss-victory.1",
+          "speaker": "slavik",
+          "text": "Світло згасло. Він неактивний."
+        },
+        {
+          "id": "dialogue.boss-victory.2",
+          "speaker": "dasha",
+          "text": "Ну що, гарбузова величносте, ми все-таки пройдемо!"
+        },
+        {
+          "id": "dialogue.boss-victory.3",
+          "speaker": "katya",
+          "text": "Шлях вільний! Ідемо разом. Я ж казала, що ми свого досягнемо."
         }
       ]
     }

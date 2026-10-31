@@ -5,7 +5,14 @@ const all=[...DIALOGUE_DATA.lines,...DIALOGUE_DATA.conversations.flatMap(c=>c.tu
 assert.equal(new Set(all.map(line=>line.id)).size,all.length);
 for(const line of all){assert(DIALOGUE_DATA.profiles[line.speaker]);assert(line.text.trim());assert(!/[<>]/.test(line.text));assert(speechDuration(line.text)>=2600);}
 assert.equal(DIALOGUE_DATA.profiles.slavik.nickname,'SlaVStaR');assert.equal(DIALOGUE_DATA.profiles.dasha.nickname,'PurpleDog');assert(DIALOGUE_DATA.profiles.katya.aliases.includes('Чорна пантера'));
-for(const id of Object.keys(DIALOGUE_DATA.profiles))assert.equal(DIALOGUE_DATA.lines.filter(l=>l.speaker===id&&l.trigger==='phone').length,12);
+for(const id of ['slavik','dasha','katya'])assert.equal(DIALOGUE_DATA.lines.filter(l=>l.speaker===id&&l.trigger==='phone').length,12);
+for(const id of ['slavik','dasha','katya']){
+ assert.equal(DIALOGUE_DATA.lines.filter(l=>l.speaker===id&&l.trigger==='screamer').length,5);
+ const ghosts=createDialogueDirector({random:()=>0});
+ assert(ghosts.onEvent(id,'screamer',{priority:true}));const first=ghosts.advance(1);
+ assert.equal(first.speaker,id);assert.equal(first.trigger,'screamer');
+ assert(ghosts.onEvent(id,'screamer',{priority:true}));assert.notEqual(ghosts.advance(1).id,first.id);
+}
 const scene=DIALOGUE_DATA.scene.startingPositions;
 assert(scene.slavik.x<scene.dasha.x&&scene.dasha.x<scene.katya.x);
 assert(scene.katya.x-scene.dasha.x>=180);

@@ -88,3 +88,25 @@
 
 .stage.is-exploring .scene-title{opacity:0;transform:translateY(-8px);pointer-events:none}
 .scene-title{transition:opacity .3s,transform .3s}
+
+#touch-controls .ability-button:enabled{opacity:1;cursor:pointer;background:#173849;color:#b6f2ff;border-color:#63bfd1;box-shadow:inset 0 0 12px #8bd8ef15}
+#touch-controls .ability-button:enabled.is-held{background:#285269;box-shadow:0 0 14px #8bd8ef35}
+.boss-status{position:absolute;z-index:2;top:12px;left:50%;transform:translateX(-50%);max-width:90%;padding:7px 13px;border:1px solid #efb57955;border-radius:18px;background:#241827b8;color:#ffe3b6;font-size:11px;font-weight:700;text-align:center;pointer-events:none}.boss-status[hidden]{display:none}@media(max-width:600px){.boss-status{top:7px;padding:5px 9px;font-size:9px}}
+
+#touch-controls .ability-button[data-hero=dasha]:enabled{background:#39254d;color:#ecd3ff;border-color:#b286d5}
+#touch-controls .ability-button[data-hero=katya]:enabled{background:#492b3f;color:#ffe0ba;border-color:#eab08a}
+@media(max-width:760px),(pointer:coarse){
+ #touch-controls .action-controls{display:grid;grid-template-columns:repeat(2,62px);gap:8px}
+ #touch-controls .forward-jump-button{grid-column:1/-1;width:100%;height:46px;flex-direction:row;gap:8px;border-radius:13px}
+ #touch-controls .ability-button{width:62px;height:64px}
+}
+@media(max-width:360px){
+ #touch-controls .action-controls{grid-template-columns:repeat(2,55px);gap:7px}
+ #touch-controls .ability-button{width:55px;height:62px}
+ #touch-controls .action-button .button-caption{font-size:9px}
+}
+@media(orientation:landscape) and (max-height:540px) and (max-width:1000px){
+ #touch-controls .action-controls{display:grid;grid-template-columns:repeat(2,64px);gap:8px}
+ #touch-controls .forward-jump-button{grid-column:1/-1;width:100%;height:46px;flex-direction:row;gap:8px;border-radius:13px}
+ #touch-controls .ability-button{width:64px;height:68px}
+}

@@ -18,6 +18,10 @@ export function createDialogueDirector({random=Math.random,isAvailable=()=>true}
   }
   function onEvent(speaker,trigger,{priority=false}={}){
     if(!isAvailable(speaker)||(!priority&&(current||queue.length||clock<nextEventAt)))return false;
+    // Keep explicit ability feedback visible over ambient danger warnings.
+    // A new ability or an actual fall can still interrupt it immediately.
+    const feedback=current??queue[0];
+    if(feedback?.trigger?.startsWith('ability-')&&!trigger.startsWith('ability-')&&!trigger.startsWith('boss-')&&!['hands-hit','fall'].includes(trigger))return false;
     // Slavik often chooses silence; his siblings/friend speak more readily.
     if(speaker==='slavik'&&!priority&&trigger!=='fall'&&random()>.4)return false;
     const choices=DIALOGUE_DATA.lines.filter(line=>line.speaker===speaker&&line.trigger===trigger);
@@ -25,6 +29,14 @@ export function createDialogueDirector({random=Math.random,isAvailable=()=>true}
     if(priority){current=null;queue=[];openingPending=false;}
     const key=speaker+'.'+trigger,line=pick(choices,lastLines.get(key));lastLines.set(key,line.id);
     queue=[line];waitingUntil=clock;nextEventAt=clock+11000;nextAmbientAt=Infinity;return true;
+  }
+  function playLines(lines,{id='scene',force=false,interruptAbilities=false}={}){
+    if(!force&&(current||queue.length))return false;
+    const feedback=current??queue[0];
+    if(!interruptAbilities&&feedback?.trigger?.startsWith('ability-'))return false;
+    const turns=lines.filter(line=>line&&isAvailable(line.speaker));if(!turns.length)return false;
+    current=null;queue=turns.map(line=>({...line,conversationId:id}));waitingUntil=clock;
+    openingPending=false;nextAmbientAt=Infinity;nextEventAt=clock+11000;return true;
   }
   function advance(ms){
     clock+=Math.max(0,Math.min(Number.isFinite(ms)?ms:0,100));
@@ -51,5 +63,5 @@ export function createDialogueDirector({random=Math.random,isAvailable=()=>true}
     return current;
   }
   function reset(){clock=0;current=null;queue=[];waitingUntil=0;nextAmbientAt=1600;nextEventAt=0;lastConversation='';openingPending=true;lastLines.clear();}
-  return {advance,onEvent,startConversation,reset,getCurrent:()=>current};
+  return {advance,onEvent,startConversation,playLines,reset,getCurrent:()=>current};
 }
